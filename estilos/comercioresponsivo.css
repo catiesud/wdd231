@@ -1,0 +1,25 @@
+.menu-toggle {
+  background: var(--cor-destaque);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: var(--cor-primaria);
+    padding: 1rem;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+}

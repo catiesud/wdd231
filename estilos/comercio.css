@@ -1,0 +1,107 @@
+/* Paleta: tons de azul escuro, cinza e dourado */
+:root {
+  --cor-fundo: #f5f5f5;
+  --cor-primaria: #1a2a40;
+  --cor-secundaria: #3c5a72;
+  --cor-destaque: #c9a227;
+  --cor-texto: #333;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+header {
+  background: var(--cor-primaria);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.foto img {
+    display: flex;
+  border-radius: 10px;
+  border: 3px solid var(--cor-destaque);
+}
+
+.filtros button {
+  background: var(--cor-secundaria);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.lista-cursos {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.curso {
+  background: var(--cor-destaque);
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+footer {
+  background: var(--cor-primaria);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer .social a {
+  color: var(--cor-destaque);
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+/* Responsividade para celular */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lista-cursos {
+    flex-direction: column;
+  }
+}
