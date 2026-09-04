@@ -14,6 +14,7 @@ body {
   color: var(--cor-texto);
 }
 
+/* Header */
 header {
   background: var(--cor-primaria);
   color: white;
@@ -41,88 +42,44 @@ nav a {
   font-weight: bold;
 }
 
+/* Main */
 main {
   padding: 2rem;
-}
-h3 {
-    background-color:var(--cor-secundaria);
-    color: aliceblue;
-    border: 1px solid  #131312;
-
-}
-
-h2 {
-    background-color:var(--cor-secundaria);
-    color: aliceblue;
-    border: 1px solid  #131312;
-
-}
-section {
-  margin-bottom: 2rem;
-}
-
-
-
-.foto img {
-    direction: left;
   display: flex;
-  border-radius: 10px;
-  border: 3px solid var(--cor-destaque);
-}
-.foto h2 {
-    background-color:var(--cor-secundaria);
-    color: aliceblue;
-    border: 1px solid  #131312;
-
-}
-
-main {
-  display: flex;
-  /*  quebra de telas menores */
   flex-wrap: wrap;       
   gap: 20px;
 }
 
+section {
+  margin-bottom: 2rem;
+}
+
+/* Títulos padronizados */
+h2, h3 {
+  background-color: var(--cor-secundaria);
+  color: aliceblue;
+  border: 1px solid #131312;
+  text-align: center;
+  padding: 5px;
+}
+
+/* Sobre Mim e Foto lado a lado */
 .sobre-mim, .foto {
-  /* cada seção ocupa metade do espaço */
   flex: 1;
-  /* largura mínima para não ficar muito estreito */               
   min-width: 250px;      
 }
 
-/* Centralizar cursos */
+.foto img {
+  display: block;
+  border-radius: 10px;
+  border: 3px solid var(--cor-destaque);
+  margin: 0 auto; /* centraliza a imagem dentro da seção */
+}
+
+/* Cursos */
 .lista-cursos {
   display: flex;
   justify-content: center;
-  gap: 15px;
-}
-
-.curso {
-  text-align: 50px;
-  padding: 10px;
-  border-radius: 6px;
-}
-
-.curso h2 {
-  text-align: center;   /* centraliza o texto */
-  font-size: 1.8em;     /* opcional: aumenta o tamanho */
-  margin-bottom: 40px;  /* espaço abaixo do título */
-}
-
-
-
-.filtros button {
-  background: var(--cor-secundaria);
-  color: white;
-  border: none;
-  padding: 5px;
-  margin-top: auto;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.lista-cursos {
-  display: flex;
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -137,9 +94,20 @@ main {
   font-weight: bold;
 }
 
+/* Botões de filtro */
+.filtros button {
+  background: var(--cor-secundaria);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 5px;
+}
 
+/* Footer */
 footer {
-    width: 100%;
+  width: 100%;
   background: var(--cor-primaria);
   color: white;
   text-align: center;
@@ -151,4 +119,3 @@ footer .social a {
   margin: 0 0.5rem;
   text-decoration: none;
 }
-
