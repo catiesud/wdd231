@@ -44,6 +44,12 @@ nav a {
 main {
   padding: 2rem;
 }
+h3 {
+    background-color:var(--cor-secundaria);
+    color: aliceblue;
+    border: 1px solid  #131312;
+
+}
 
 h2 {
     background-color:var(--cor-secundaria);
@@ -54,44 +60,56 @@ h2 {
 section {
   margin-bottom: 2rem;
 }
-.sobre-mim {
-  display: flex;              /* Coloca texto e foto lado a lado */
-  align-items: center;        /* Alinha verticalmente */
-  gap: 20px;                  /* Espaço entre texto e foto */
-}
 
-.sobre-mim .texto {
-  flex: 2;                    /* Texto ocupa mais espaço */
-}
-
-.sobre-mim .foto img {
-  width: 200px;               /* Ajuste o tamanho da foto */
-  border-radius: 10px;        /* Deixa cantos arredondados */
-}
 
 
 .foto img {
+    direction: left;
   display: flex;
   border-radius: 10px;
   border: 3px solid var(--cor-destaque);
 }
-.foto p {
+.foto h2 {
     background-color:var(--cor-secundaria);
     color: aliceblue;
     border: 1px solid  #131312;
 
 }
 
-.sobre-mim .conteudo {
-  display: flex;            /* coloca texto e foto lado a lado */
-  align-items: center;      /* alinha verticalmente */
-  gap: 20px;                /* espaço entre texto e imagem */
+main {
+  display: flex;
+  /*  quebra de telas menores */
+  flex-wrap: wrap;       
+  gap: 20px;
 }
 
-.sobre-mim img {
-  width: 200px;             /* ajuste o tamanho da foto */
-  border-radius: 8px;       /* bordas arredondadas (opcional) */
+.sobre-mim, .foto {
+  /* cada seção ocupa metade do espaço */
+  flex: 1;
+  /* largura mínima para não ficar muito estreito */               
+  min-width: 250px;      
 }
+
+/* Centralizar cursos */
+.lista-cursos {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.curso {
+  text-align: 50px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.curso h2 {
+  text-align: center;   /* centraliza o texto */
+  font-size: 1.8em;     /* opcional: aumenta o tamanho */
+  margin-bottom: 40px;  /* espaço abaixo do título */
+}
+
+
 
 .filtros button {
   background: var(--cor-secundaria);
@@ -119,7 +137,9 @@ section {
   font-weight: bold;
 }
 
+
 footer {
+    width: 100%;
   background: var(--cor-primaria);
   color: white;
   text-align: center;
@@ -132,14 +152,3 @@ footer .social a {
   text-decoration: none;
 }
 
-/* Responsividade para celular */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .lista-cursos {
-    flex-direction: column;
-  }
-}
