@@ -45,22 +45,60 @@ main {
   padding: 2rem;
 }
 
+h2 {
+    background-color:var(--cor-secundaria);
+    color: aliceblue;
+    border: 1px solid  #131312;
+
+}
 section {
   margin-bottom: 2rem;
 }
+.sobre-mim {
+  display: flex;              /* Coloca texto e foto lado a lado */
+  align-items: center;        /* Alinha verticalmente */
+  gap: 20px;                  /* Espaço entre texto e foto */
+}
+
+.sobre-mim .texto {
+  flex: 2;                    /* Texto ocupa mais espaço */
+}
+
+.sobre-mim .foto img {
+  width: 200px;               /* Ajuste o tamanho da foto */
+  border-radius: 10px;        /* Deixa cantos arredondados */
+}
+
 
 .foto img {
-    display: flex;
+  display: flex;
   border-radius: 10px;
   border: 3px solid var(--cor-destaque);
+}
+.foto p {
+    background-color:var(--cor-secundaria);
+    color: aliceblue;
+    border: 1px solid  #131312;
+
+}
+
+.sobre-mim .conteudo {
+  display: flex;            /* coloca texto e foto lado a lado */
+  align-items: center;      /* alinha verticalmente */
+  gap: 20px;                /* espaço entre texto e imagem */
+}
+
+.sobre-mim img {
+  width: 200px;             /* ajuste o tamanho da foto */
+  border-radius: 8px;       /* bordas arredondadas (opcional) */
 }
 
 .filtros button {
   background: var(--cor-secundaria);
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  margin-right: 0.5rem;
+  padding: 5px;
+  margin-top: auto;
   cursor: pointer;
   border-radius: 5px;
 }

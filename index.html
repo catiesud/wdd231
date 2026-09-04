@@ -3,12 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Portfólio </title>
-  <meta name="author" content="Catiana Guillaume">
+  <title> Pagina Inicial </title>
+ <meta name="description"
+      content="minha primeira página  WDD 231,ao longo das semanas do bloco sera desenvolvovido o site da camera do comercio da cidade ">
+    <meta name="author" content="Catiana Guillaume">
   <link rel="stylesheet" href="estilos/comercio.css">
   <link rel="stylesheet" href="estilos/comercioresponsivo.css">
   <script src="scripts/principal.js" defer></script>
   <script src="scripts/curso.js" defer></script>
+
+  <!-- Preconnect para otimizar carregamento -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Link para carregar a fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+ <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -24,13 +38,18 @@
   </header>
 
   <main>
-    <section id="inicio">
-      <h2>Sobre Mim</h2>
-      <p>Olá! Meu nome é <strong>Catiana Guillaume</strong>, moro em São Paulo e sou apaixonada por desenvolvimento web e design elegante, sou formada em Administração com enfase em comercio exterior e curso atualmente Engenharia Civil e Desenvolvimento de Software.</p>
+
+    <section class="sobre-mim">
+      <div class="texto">
+        <h2>Sobre Mim</h2>
+        <p>Olá! Meu nome é <strong>Catiana Guillaume</strong>, moro em São Paulo e sou apaixonada por desenvolvimento web, eu sou formada em Administração com enfase em comercio exterior e atuslmente curso Engenharia Civil e Desenvolvimento de Software...</p>
+      </div>
       <div class="foto">
+        <p>foto do perfil</p>
         <img src="imagens/catianaperfildinamica.jpeg" alt="Foto do perfil" width="200">
       </div>
     </section>
+
 
     <section id="cursos">
       <h2>Cursos de Certificação Web</h2>
@@ -46,15 +65,17 @@
       </div>
       <p class="creditos">O total de créditos para os cursos listados acima é 6.</p>
     </section>
+   
   </main>
 
   <footer>
     <p>© 2026 - 🌻 Catiana Guillaume 🌻 - São Paulo, Brasil</p>
-  <p id="ultimaModificacao"></p>
-    <div class="social">
-      <a href="#">LinkedIn</a>
+    <p>Última Modificação: <span id="ultima-modificacao"></span></p>    
+    
+   <div class="social">
+      <a href="https://www.linkedin.com/in/catiana-guillaume-0111a8151/?skipRedirect=true">LinkedIn</a>
       <img src="imagens/linkedin.svg" alt="icone do linkedin" width="50">
-      <a href="#">GitHub</a>
+      <a href="https://github.com/catiesud">GitHub</a>
       <img src="imagens/github.svg" alt="icone do github" width="50">
     </div>
 
