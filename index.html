@@ -18,7 +18,9 @@
 </head>
 <body>
   <header>
-    <img src="imagens/compras-de-bolsas.svg" alt="logo do site" width="100">
+    <a href="#inicio">
+      <img src="imagens/compras-de-bolsas.svg" alt="Logotipo da Câmara de Comércio" width="100">
+    </a>
     <h1>Câmara de Comércio de São Paulo</h1>
     <nav>
       <ul>
@@ -31,7 +33,7 @@
 
   <main>
     <!-- Seção 1: Sobre Mim -->
-    <section class="sobre-mim">
+    <section id="inicio" class="sobre-mim">
       <h2>Sobre Mim</h2>
       <p>Olá! Meu nome é <strong>Catiana Guillaume</strong>, moro em São Paulo e sou apaixonada por desenvolvimento web. Sou formada em Administração com ênfase em comércio exterior e atualmente curso Engenharia Civil e Desenvolvimento de Software.</p>
     </section>
@@ -39,35 +41,44 @@
     <!-- Seção 2: Foto -->
     <section class="foto">
       <h2>Foto do perfil</h2>
-      <img src="imagens/catianaperfildinamica.jpeg" alt="Foto do perfil" width="200">
+      <img src="imagens/catianaperfildinamica.jpeg" alt="Foto de Catiana Guillaume" width="200" loading="lazy">
     </section>
 
     <!-- Seção 3: Cursos -->
     <section id="cursos">
       <h2>Cursos de Certificação Web</h2>
-      <div class="filtros">
-        <button>Todos</button>
-        <button>CSE</button>
-        <button>WDD</button>
+      <div class="filtros" role="group" aria-label="Filtros de cursos">
+        <button aria-pressed="true">Todos</button>
+        <button aria-pressed="false">CSE</button>
+        <button aria-pressed="false">WDD</button>
       </div>
       <div class="lista-cursos">
         <div class="curso">WDD 130</div>
         <div class="curso">WDD 131</div>
         <div class="curso">WDD 231</div>
       </div>
-      <p class="creditos">O total de créditos para os cursos listados acima é 6.</p>
+      <aside class="creditos">O total de créditos para os cursos listados acima é 6.</aside>
     </section>
   </main>
 
   <footer>
     <p>© 2026 - 🌻 Catiana Guillaume 🌻 - São Paulo, Brasil</p>
-    <p>Última Modificação: <span id="ultima-modificacao"></span></p>    
+    <p>Última Modificação: <span id="ultima-modificacao"></span></p>
     <div class="social">
-      <a href="https://www.linkedin.com/in/catiana-guillaume-0111a8151/?skipRedirect=true">LinkedIn</a>
-      <img src="imagens/linkedin.svg" alt="icone do linkedin" width="50">
-      <a href="https://github.com/catiesud">GitHub</a>
-      <img src="imagens/github.svg" alt="icone do github" width="50">
+      <a href="https://www.linkedin.com/in/catiana-guillaume-0111a8151/?skipRedirect=true">
+        <img src="imagens/linkedin.svg" alt="LinkedIn" width="50">
+      </a>
+      <a href="https://github.com/catiesud">
+        <img src="imagens/github.svg" alt="GitHub" width="50">
+      </a>
     </div>
   </footer>
+
+  <script>
+    // mostra dia/mês/ano e hora
+    const data = new Date(document.lastModified);
+    const formatada = data.toLocaleString("pt-BR"); 
+    document.getElementById("ultima-modificacao").textContent = formatada;
+  </script>
 </body>
 </html>
