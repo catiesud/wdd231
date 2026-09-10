@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Câmara do Comércio de São Paulo</title>
+  <meta name="description" content="Site oficial da Câmara do Comércio de São Paulo — promovendo o desenvolvimento econômico e o comércio local.">
+  <meta name="author" content="Catiana Guillaume">
+  <link rel="icon" href="imagens/favicon-camara.png" type="image/png">
+
+  <!-- Paleta de cores suaves e elegantes -->
+  <style>
+    :root {
+      --cor-principal: #238992; /* verde elegante */
+      --cor-secundaria: #cbc8c8; /* fundo meio claro */
+      --cor-destaque: #ffd54f; /* amarelo suave */
+      --cor-texto: #333;
+      --cor-link: #1565c0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--cor-secundaria);
+      color: var(--cor-texto);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: var(--cor-principal);
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    header img {
+      width: 60px;
+      vertical-align: middle;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--cor-destaque);
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      background-color: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: var(--cor-principal);
+      border-bottom: 2px solid var(--cor-destaque);
+      padding-bottom: 0.5rem;
+    }
+
+    footer {
+      background-color: var(--cor-principal);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--cor-destaque);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="imagens/camara-comercio.png" alt="Logo Câmara São Paulo">
+    <h1>Câmara do Comércio de São Paulo</h1>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre Nós</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sobre">
+      <h2>Sobre Nós</h2>
+      <p>A Câmara do Comércio de São Paulo atua para fortalecer o comércio local, promover parcerias e incentivar o desenvolvimento econômico da cidade.</p>
+    </section>
+
+    <section id="servicos">
+      <h2>Serviços</h2>
+      <ul>
+        <li>Cadastro de empresas</li>
+        <li>Consultoria empresarial</li>
+        <li>Eventos de networking</li>
+        <li>Parcerias institucionais</li>
+      </ul>
+    </section>
+
+    <section id="eventos">
+      <h2>Eventos</h2>
+      <p>Confira nossa agenda de eventos e participe das iniciativas que impulsionam o comércio paulista.</p>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>📍 Endereço: Av. Paulista, São Paulo - SP</p>
+      <p>📞 Telefone: (11) 99999-9999</p>
+      <p>✉️ Email: contato@camarasp.com.br</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Câmara do Comércio de São Paulo | 💻Catiana Guillaume 💻</p>
+    <p>Última modificação: <span id="ultima-modificacao"></span></p>
+  </footer>
+
+  <script>
+    const data = new Date(document.lastModified);
+    document.getElementById("ultima-modificacao").textContent = data.toLocaleString("pt-BR");
+  </script>
+</body>
+</html>
