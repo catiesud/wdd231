@@ -65,3 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
   configurarLayout();
   atualizarRodape();
 });
+
+ <script>
+    const data = new Date(document.lastModified);
+    const formatada = data.toLocaleString("pt-BR"); 
+    document.getElementById("ultima-modificacao").textContent = formatada;
+  </script>
