@@ -3,7 +3,6 @@
 
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Diretório</title>
   <meta name="description" content="Minha primeira página WDD 231, ao longo das semanas do bloco será desenvolvido o site da Câmara do Comércio da cidade">
   <meta name="author" content="Catiana Guillaume">
 
@@ -27,6 +26,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+  <title> Diretório</title>
+
 <header class="hero">
     <div class="overlay"></div>
     <div class="content">
@@ -34,15 +35,17 @@
 
      <h1>Câmara de Comércio de São Paulo</h1>
      <p>Conectando empresas, fortalecendo oportunidades.</p>
-     <a href="#inicio">
-    </a>
-    <nav>
-      <ul>
-        <li><a href="#pagina inicial">Início</a></li>
-        <li><a href="#projeto da camara">Projeto Câmara</a></li>
-        <li><a href="#projeto final">Projeto Final</a></li>
-      </ul>
-    </nav>
+    
+    
+
+  <nav>
+    <ul>
+      <li><a href="#pagina-inicial">Início</a></li>
+      <li><a href="#projeto-camara">Projeto Câmara</a></li>
+      <li><a href="#projeto-final">Projeto Final</a></li>
+    </ul>
+  </nav>
+
 
 
 
@@ -51,17 +54,20 @@
 
 <body>
   <main> 
+    <section id="pagina-inicial">
+  <h2>Página Inicial</h2>
+</section>
 
-    <div class="overlay"></div>
-    <div class="content">
-      <h1>Câmara de Comércio de São Paulo</h1>
-      <a href="#sobre" class="btn">Saiba Mais</a>
-    </div>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
+<section id="projeto-camara">
+  <h2>Projeto Câmara</h2>
+</section>
+
+<section id="projeto-final">
+  <h2>Projeto Final</h2>
+</section>
+
+   
+  
   </main>
    
      <footer>
@@ -80,6 +86,12 @@
     </a>
 
     </div>
+
+     <script>
+       const data = new Date(document.lastModified);
+       const formatada = data.toLocaleString("pt-BR"); 
+       document.getElementById("ultima-modificacao").textContent = formatada;
+     </script>
   </footer>
 
  
