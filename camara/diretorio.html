@@ -1,98 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-
-    <meta charset="UTF-8">
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Minha primeira página WDD 231, ao longo das semanas do bloco será desenvolvido o site da Câmara do Comércio da cidade">
   <meta name="author" content="Catiana Guillaume">
 
-<!-- Open Graph para redes sociais -->
-<meta property="og:title" content="Página Inicial - Catiana Guillaume">
-<meta property="og:description" content="Conheça mais sobre Catiana Guillaume, estudante de Engenharia Civil e Desenvolvimento de Software, apaixonada por tecnologia e comércio exterior.">
-<meta property="og:image" content="https://github.com/catiesud/wdd231/blob/main/camara/imagens/camara-comercio.png">
-<meta property="og:url" content="https://www.facebook.com/share/182e4hbTg9/">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="pt_BR">
-<script src="scripts/principal.js" defer></script>
+  <!-- Open Graph para redes sociais -->
+  <meta property="og:title" content="Diretório - Câmara de Comércio">
+  <meta property="og:description" content="Conheça mais sobre Catiana Guillaume, estudante de Engenharia Civil e Desenvolvimento de Software, apaixonada por tecnologia e comércio exterior.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/catiesud/wdd231/main/camara/imagens/camara-comercio.png">
+  <meta property="og:url" content="https://www.facebook.com/share/182e4hbTg9/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
 
+  <title>Diretório</title>
 
   <link rel="stylesheet" href="estilos/base.css">
   <link rel="stylesheet" href="estilos/basegrade.css">
-  <script src="scripts/principal.js" defer></script>
-
   <link rel="icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-</head>
-  <title> Diretório</title>
 
-<header class="hero">
+  <script src="scripts/principal.js" defer></script>
+</head>
+<body>
+  <header class="hero">
     <div class="overlay"></div>
     <div class="content">
-    <img src="imagens/camara-comercio.png" alt="loga camara do comercio de São Paulo" width="200">
-
-     <h1>Câmara de Comércio de São Paulo</h1>
-     <p>Conectando empresas, fortalecendo oportunidades.</p>
-    
-    
-
-  <nav>
-    <ul>
-      <li><a href="#pagina-inicial">Início</a></li>
-      <li><a href="#projeto-camara">Projeto Câmara</a></li>
-      <li><a href="#projeto-final">Projeto Final</a></li>
-    </ul>
-  </nav>
-
-
-
-
+      <img src="imagens/camara-comercio.png" alt="logo câmara do comércio de São Paulo" width="200">
+      <h1>Câmara de Comércio de São Paulo</h1>
+      <p>Conectando empresas, fortalecendo oportunidades.</p>
+      <nav>
+        <ul>
+          <li><a href="#pagina-inicial">Início</a></li>
+          <li><a href="#projeto-camara">Projeto Câmara</a></li>
+          <li><a href="#projeto-final">Projeto Final</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-<body>
-  <main> 
+  <main>
     <section id="pagina-inicial">
-  <h2>Página Inicial</h2>
-</section>
+      <h2>Página Inicial</h2>
+    </section>
 
-<section id="projeto-camara">
-  <h2>Projeto Câmara</h2>
-</section>
+    <section id="projeto-camara">
+      <h2>Projeto Câmara</h2>
+    </section>
 
-<section id="projeto-final">
-  <h2>Projeto Final</h2>
-</section>
-
-   
-  
+    <section id="projeto-final">
+      <h2>Projeto Final</h2>
+    </section>
   </main>
-   
-     <footer>
+
+  <footer>
     <p>© 2026 - 🌻 Catiana Guillaume 🌻 - São Paulo, Brasil</p>
     <p>Última Modificação: <span id="ultima-modificacao"></span></p>
     <div class="social">
-      <a href="https://www.linkedin.com/showcase/spchamber/?originalSubdomain=br"=true">
+      <a href="https://www.linkedin.com/showcase/spchamber/?originalSubdomain=br">
         <img src="imagens/linkedin.svg" alt="LinkedIn" width="50">
       </a>
       <a href="https://github.com/catiesud">
         <img src="imagens/github.svg" alt="GitHub" width="50">
       </a>
-    <a href="https://www.facebook.com/spchamberoficial/">
-            <img src="imagens/facebook.svg" alt="icone face" width="50">
-
-    </a>
-
+      <a href="https://www.facebook.com/spchamberoficial/">
+        <img src="imagens/facebook.svg" alt="Facebook" width="50">
+      </a>
     </div>
-
-     <script>
-       const data = new Date(document.lastModified);
-       const formatada = data.toLocaleString("pt-BR"); 
-       document.getElementById("ultima-modificacao").textContent = formatada;
-     </script>
+    <script>
+      const data = new Date(document.lastModified);
+      const formatada = data.toLocaleString("pt-BR");
+      document.getElementById("ultima-modificacao").textContent = formatada;
+    </script>
   </footer>
-
- 
 </body>
 </html>
