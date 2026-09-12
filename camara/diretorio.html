@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camara do comercio de São Paulo</title>
+  <meta name="description" content="Minha primeira página WDD 231, ao longo das semanas do bloco será desenvolvido o site da Câmara do Comércio da cidade">
+  <meta name="author" content="Catiana Guillaume">
+
+<!-- Open Graph para redes sociais -->
+<meta property="og:title" content="Página Inicial - Catiana Guillaume">
+<meta property="og:description" content="Conheça mais sobre Catiana Guillaume, estudante de Engenharia Civil e Desenvolvimento de Software, apaixonada por tecnologia e comércio exterior.">
+<meta property="og:image" content="https://github.com/catiesud/imagens/camara-comercio">
+<meta property="og:url" content="https://www.facebook.com/share/182e4hbTg9/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+
+
+  <link rel="stylesheet" href="estilos/base.css">
+  <link rel="stylesheet" href="estilos/basegrade.css">
+  <script src="scripts/principal.js" defer></script>
+  <script src="scripts/curso.js" defer></script>
+<link rel="icon"  href="Image-favi.ico">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+<header class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+     <h1>Câmara de Comércio de São Paulo</h1>
+     <p>Conectando empresas, fortalecendo oportunidades.</p>
+     <a href="imagens/camara-comercio.png" alt="imagem camara de comercio de são paulo" ></a>
+     <a href="#inicio">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#pagina inicial">Início</a></li>
+        <li><a href="#projeto da camara">Projeto Câmara</a></li>
+        <li><a href="#projeto final">Projeto Final</a></li>
+      </ul>
+    </nav>
+
+
+
+    </div>
+  </header>
+
 <body>
-    
+ 
+   
+     <footer>
+    <p>© 2026 - 🌻 Catiana Guillaume 🌻 - São Paulo, Brasil</p>
+    <p>Última Modificação: <span id="ultima-modificacao"></span></p>
+    <div class="social">
+      <a href="https://www.linkedin.com/showcase/spchamber/?originalSubdomain=br"=true">
+        <img src="imagens/linkedin.svg" alt="LinkedIn" width="50">
+      </a>
+      <a href="https://github.com/catiesud">
+        <img src="imagens/github.svg" alt="GitHub" width="50">
+      </a>
+    <a href="https://www.facebook.com/spchamberoficial/">
+            <img src="imagens/facebook.svg" alt="icone face" width="50">
+
+    </a>
+
+    </div>
+  </footer>
+
+  <script>
+    const data = new Date(document.lastModified);
+    const formatada = data.toLocaleString("pt-BR"); 
+    document.getElementById("ultima-modificacao").textContent = formatada;
+  </script>
 </body>
 </html>

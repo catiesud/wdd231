@@ -1,0 +1,160 @@
+:root {
+  --cor-principal: #238992; /* verde elegante */
+  --cor-secundaria: #f4f4f4; /* fundo claro */
+  --cor-destaque: #ffd54f;   /* amarelo suave */
+  --cor-texto: #333;
+}
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+/* Header e Footer */
+header, footer {
+  background-color: var(--cor-principal);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--cor-destaque);
+}
+
+/* Main */
+main {
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: var(--cor-principal);
+  border-bottom: 2px solid var(--cor-destaque);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Diretório de membros */
+#membros-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.membro-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.membro-card img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+/* Botões de layout */
+.botoes-layout {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.botoes-layout button {
+  background: var(--cor-principal);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.botoes-layout button:hover {
+  background: var(--cor-destaque);
+  color: var(--cor-texto);
+}
+
+/* Footer */
+footer .social {
+  margin-top: 1rem;
+}
+
+footer .social a img {
+  width: 40px;
+  margin: 0 8px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  #membros-container {
+    /* lista em telas menores */
+    grid-template-columns: 1fr; 
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  header, footer {
+    padding: 0.8rem;
+  }
+
+  .membro-card {
+    padding: 0.8rem;
+  }
+}

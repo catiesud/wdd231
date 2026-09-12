@@ -1,0 +1,38 @@
+async function carregarMembros() {
+  const resposta = await fetch('dados/membros.json');
+  const membros = await resposta.json();
+
+  const container = document.getElementById('membros-container');
+  container.innerHTML = '';
+
+  membros.forEach(m => {
+    const card = document.createElement('div');
+    card.classList.add('membro-card');
+    card.innerHTML = `
+      <img src="imagens/${m.imagem}" alt="${m.nome}">
+      <h3>${m.nome}</h3>
+      <p><strong>Endereço:</strong> ${m.endereco}</p>
+      <p><strong>Telefone:</strong> ${m.telefone}</p>
+      <p><a href="${m.site}" target="_blank">Visite o site</a></p>
+      <p><strong>Nível:</strong> ${m.nivel}</p>
+      <p>${m.info}</p>
+    `;
+    container.appendChild(card);
+  });
+}
+
+carregarMembros();
+
+// Alternar layout
+document.getElementById('btn-grade').addEventListener('click', () => {
+  document.getElementById('membros-container').classList.remove('lista');
+  document.getElementById('membros-container').classList.add('grade');
+});
+
+document.getElementById('btn-lista').addEventListener('click', () => {
+  document.getElementById('membros-container').classList.remove('grade');
+  document.getElementById('membros-container').classList.add('lista');
+});
+
+// Atualizar rodapé com ano atual
+document.querySelector('footer p').innerHTML = `© ${new Date().getFullYear()} - 🌻 Catiana Guillaume 🌻 - São Paulo, Brasil`;

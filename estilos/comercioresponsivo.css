@@ -37,3 +37,9 @@
     display: flex;
   }
 }
+
+footer .social a {
+  color: var(--cor-destaque);
+  margin: 0 0.5rem;
+  text-decoration: none;
+}

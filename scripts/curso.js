@@ -37,3 +37,4 @@ document.querySelectorAll(".filtros button").forEach(btn => {
 
 // Inicialização
 renderCursos();
+
