@@ -1,65 +1,65 @@
 [
-  {
-    "imagem": "wdd231/camara/imagens/hero-pintura.jpeg",
-    "nome": "Pintura 360",
-    "endereco": "Rua das Acácias, 2154 - Campinas-SP 13090-490",
-    "telefone": "(19) 3647-1922",
-    "site": "https://www.pintura360.com",
-    "nivel": 3,
-    "info": "Especializada em pintura residencial e comercial."
-  },
-  {
-    "imagem": "wdd231/camara/imagens/jn-hidralica-cartao.jpeg",
-    "nome": "JN Hidraulica",
-    "endereco": "Av. das Nações, 1490 - Belo Horizonte-MG 30140-150",
-    "telefone": "(31) 9876-5644",
-    "site": "https://www.jnhidraulica.com",
-    "nivel": 2,
-    "info": "Empresa especializada que traz soluções para encanamento."
-  },
-  {
-    "imagem": "empresa3.png",
-    "nome": "WebMakers Studio",
-    "endereco": "Rua Itamarati, 3401 - Brasília-DF 72800-110",
-    "telefone": "(61) 3647-1922",
-    "site": "https://www.webmakers.com.br",
-    "nivel": 1,
-    "info": "Estúdio de desenvolvimento web e marketing digital."
-  },
-  {
-    "imagem": "empresa4.png",
-    "nome": "DesignHub Criativo",
-    "endereco": "Av. Central, 1090 - Curitiba-PR 80230-000",
-    "telefone": "(41) 3521-6543",
-    "site": "https://www.designhub.cr",
-    "nivel": 2,
-    "info": "Consultoria em design de produtos e UX/UI."
-  },
-  {
-    "imagem": "empresa5.png",
-    "nome": "CodeNova Sistemas",
-    "endereco": "Rua das Flores, 1980 - Porto Alegre-RS 90560-050",
-    "telefone": "(51) 3647-1921",
-    "site": "https://www.codenova.systems",
-    "nivel": 3,
-    "info": "Desenvolvimento de sistemas corporativos e ERP."
-  },
-  {
-    "imagem": "empresa6.png",
-    "nome": "VisionTech Soluções",
-    "endereco": "Av. Amazonas, 467 - Manaus-AM 69037-000",
-    "telefone": "(92) 3647-1921",
-    "site": "https://www.visiontech.solutions",
-    "nivel": 1,
-    "info": "Tecnologia aplicada a soluções empresariais e IoT."
-  },
-  {
-    "imagem": "empresa7.png",
-    "nome": "CreativeFlow Mídia",
-    "endereco": "Rua Paulista, 400 - São Paulo-SP 04040-004",
-    "telefone": "(11) 3647-1921",
-    "site": "https://www.creativeflow.media",
-    "nivel": 2,
-    "info": "Produção de conteúdo multimídia e campanhas digitais."
-  }
+    {
+        "imagem": "imagens/pintura360.jpeg",
+        "nome": "Pintura 360",
+        "endereco": "Rua das Acácias, 2154 - Campinas-SP 13090-490",
+        "telefone": "(11) 96174-7566",
+        "site": "https://www.pintura360.com",
+        "nivel": 3,
+        "info": "Especializada em pintura residencial e comercial."
+    },
+    {
+        "imagem": "imagens/pintura360.jpeg",
+        "nome": "JN Hidraulica",
+        "endereco": "Av. das Nações, 1490 - São Paulo-SP 30140-150",
+        "telefone": "(11) 99999-9999",
+        "site": "https://www.jnhidraulica.com",
+        "nivel": 2,
+        "info": "Empresa especializada em soluções para encanamento."
+    },
+    {
+        "imagem": "imagens/pintura360.jpeg",
+        "nome": "WebMakers Studio",
+        "endereco": "Rua Itamarati, 3401 - Brasília-DF 72800-110",
+        "telefone": "(61) 3647-1922",
+        "site": "https://www.webmakers.com.br",
+        "nivel": 1,
+        "info": "Estúdio de desenvolvimento web e marketing digital."
+    },
+    {
+        "imagem": "imagens/designhub.png",
+        "nome": "DesignHub Criativo",
+        "endereco": "Av. Central, 1090 - Curitiba-PR 80230-000",
+        "telefone": "(41) 3521-6543",
+        "site": "https://www.designhub.cr",
+        "nivel": 2,
+        "info": "Consultoria em design de produtos e UX/UI."
+    },
+    {
+        "imagem": "imagens/codenova.png",
+        "nome": "CodeNova Sistemas",
+        "endereco": "Rua das Flores, 1980 - Porto Alegre-RS 90560-050",
+        "telefone": "(51) 3647-1921",
+        "site": "https://www.codenova.systems",
+        "nivel": 3,
+        "info": "Desenvolvimento de sistemas corporativos e ERP."
+    },
+    {
+        "imagem": "imagens/visiontech.png",
+        "nome": "VisionTech Soluções",
+        "endereco": "Av. Amazonas, 467 - Manaus-AM 69037-000",
+        "telefone": "(92) 3647-1921",
+        "site": "https://www.visiontech.solutions",
+        "nivel": 1,
+        "info": "Tecnologia aplicada a soluções empresariais e IoT."
+    },
+    {
+        "imagem": "imagens/creativeflow.png",
+        "nome": "CreativeFlow Mídia",
+        "endereco": "Rua Paulista, 400 - São Paulo-SP 04040-004",
+        "telefone": "(11) 3647-1921",
+        "site": "https://www.creativeflow.media",
+        "nivel": 2,
+        "info": "Produção de conteúdo multimídia e campanhas digitais."
+    }
 ]
