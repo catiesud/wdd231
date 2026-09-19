@@ -1,0 +1,115 @@
+/* ================================
+   TELAS GRANDES
+================================ */
+
+@media screen and (min-width: 700px) {
+
+    .cabecalho-conteudo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu-botao {
+        display: none;
+    }
+
+    .navegacao {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+        gap: 5px;
+    }
+
+
+    /* DIRETÓRIO */
+
+    .diretorio {
+        margin-top: 35px;
+        margin-bottom: 50px;
+    }
+
+    .titulo-diretorio h2 {
+        font-size: 1.5rem;
+    }
+
+    .membros.grade {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .membro-card {
+        min-height: 270px;
+        padding: 20px 15px;
+    }
+
+    .imagem-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    .imagem-container img {
+        width: 100px;
+        height: 100px;
+    }
+
+
+    /* RODAPÉ */
+
+    .rodape-conteudo {
+        max-width: 1200px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+      footer {
+      background-color: var(--cor-principal);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--cor-destaque);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    
+    footer .social a {
+      color: var(--cor-destaque);
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+
+
+
+
+
+
+
+
+
+/* TELAS MUITO GRANDES */
+
+@media screen and (min-width: 1000px) {
+
+    .cabecalho-conteudo,
+    .diretorio,
+    .rodape-conteudo {
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    .membros.grade {
+        gap: 18px;
+    }
+
+    .membro-card {
+        min-height: 285px;
+    }
+}

@@ -9,7 +9,7 @@ toggleBtn.addEventListener("click", () => {
   nav.classList.toggle("open");
 });
 
-// Copyright dinâmico
+//  dinâmico
 const anoAtual = new Date().getFullYear();
 document.getElementById("copyright").textContent =
   `© ${anoAtual} - Cat Gui - São Paulo, Brasil`;
@@ -17,3 +17,20 @@ document.getElementById("copyright").textContent =
 // Última modificação
 document.getElementById("ultimaModificacao").textContent =
   `Última Modificação: ${document.lastModified}`;
+
+// chamar dados
+  <div id="membros"></div>
+
+
+  fetch('membro.json')
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById('membros');
+      data.forEach(membro => {
+        const item = document.createElement('p');
+        item.textContent = `${membro.nome} - ${membro.cargo}`;
+        container.appendChild(item);
+      });
+    })
+    .catch(error => console.error('Erro ao carregar JSON:', error));
+
