@@ -1,163 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diretório de Empresas | Câmara de Comércio</title>
+  <meta name="description" content="Diretório de empresas e membros da Câmara de Comércio.">
+  <meta name="author" content="Catiana Guillaume">
 
-    <title>Diretório de Empresas | Câmara de Comércio</title>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Diretório de Empresas | Câmara de Comércio">
+  <meta property="og:description" content="Conheça as empresas associadas à Câmara de Comércio.">
+  <meta property="og:image" content="https://seusite.com/camara/imagens/og-image.jpg">
+  <meta property="og:url" content="https://seusite.com/camara/diretorio.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
 
-    <meta
-        name="description"
-        content="Diretório de empresas e membros da Câmara de Comércio."
-    >
+  <!-- Favicon -->
+  <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
 
-    <meta name="author" content="Catiana Guillaume">
+  <!-- CSS -->
+  <link rel="stylesheet" href="estilos/normalize.css">
+  <link rel="stylesheet" href="estilos/base.css">
+  <link rel="stylesheet" href="estilos/basegrande.css">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Diretório de Empresas | Câmara de Comércio">
-    <meta
-        property="og:description"
-        content="Conheça as empresas associadas à Câmara de Comércio."
-    >
-    <meta property="og:image" content="https://seusite.com/camara/imagens/og-image.jpg">
-    <meta property="og:url" content="https://seusite.com/camara/diretorio.html">
-    <meta property="og:type" content="website">
-
-    <meta property="og:url" content="https://www.facebook.com/share/182e4hbTg9/">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="pt_BR">
-
-
-    <!-- Favicon -->
-    <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="estilos/normalize.css">
-    <link rel="stylesheet" href="estilos/base.css">
-    <link rel="stylesheet" href="estilos/basegrande.css">
-
-    <!-- JavaScript -->
-    <script src="scripts/principal.js" defer></script>
+  <!-- JavaScript -->
+  <script src="scripts/principal.js" defer></script>
 </head>
-
 <body>
 
-  <header class="cabecalho">
-
-    <div class="cabecalho-conteudo">
-
+<header class="cabecalho">
+  <div class="cabecalho-conteudo">
     <div class="identidade">
-    <div class="logo-camara">CC</div>
+      <div class="logo-camara">CC</div>
+      <div>
+        <h1>Câmara de Comércio</h1>
+        <p>Diretório de Empresas</p>
+      </div>
+    </div>
 
-   <div>
-    <h1>Câmara de Comércio</h1>
-      <p>Diretório de Empresas</p>
-   </div>
+    <button class="menu-botao" id="menu-botao" aria-label="Abrir menu" aria-expanded="false">☰</button>
 
-   <button
-      class="menu-botao"
-      id="menu-botao"
-      aria-label="Abrir menu"
-      aria-expanded="false"
-            >
-     ☰
-      </button>
+    <nav class="navegacao" id="navegacao">
+      <a href="index.html">Início</a>
+      <a href="diretorio.html" class="ativo">Diretório</a>
+      <a href="associesse.html">Associar-se</a>
+      <a href="descobrir.html">Descobrir</a>
+    </nav>
+  </div>
+</header>
 
-        <nav class="navegacao" id="navegacao">
-           <a href="index.html">Início</a>
-           <a href="diretorio.html" class="ativo">Diretório</a>
-           <a href="associesse.html">Associar-se</a>
-           <a href="descobrir.html">Descobrir</a>
-        </nav>
+<main>
+  <section class="diretorio">
+    <div class="titulo-diretorio">
+      <div>
+        <h2>Diretório de Empresas</h2>
+        <p>Conheça nossos membros e parceiros.</p>
+      </div>
 
-        </div>
+      <div class="controles">
+        <button id="grade" class="botao-layout selecionado" aria-label="Exibir empresas em grade" aria-pressed="true" title="Visualização em grade">▦</button>
+        <button id="lista" class="botao-layout" aria-label="Exibir empresas em lista" aria-pressed="false" title="Visualização em lista">☷</button>
+      </div>
+    </div>
 
-    </header>
-
-
- <main>
-
-      <section class="diretorio">
-
-        <div class="titulo-diretorio">
-        <div>
-           <h2>Diretório de Empresas</h2>
-           <p>Conheça nossos membros e parceiros.</p>
-        </div>
-
-        < class="controles">
-
-           <button
-              id="grade"
-              class="botao-layout selecionado"
-              aria-label="Exibir empresas em grade"
-              aria-pressed="true"
-              title="Visualização em grade" >
-               ▦
-            </button>
-
-            <button
-              id="lista"
-              class="botao-layout"
-              aria-label="Exibir empresas em lista"
-              aria-pressed="false"
-              title="Visualização em lista">
-               ☷
-            </button>
-
-         
-        </div>
-
-
-        <div id="membros" class="membros grade">
-                <p class="carregando">Carregando empresas...</p>
-        </div>
-
-        </section>
-
+    <div id="membros" class="membros grade">
+      <p class="carregando">Carregando empresas...</p>
+    </div>
+  </section>
 </main>
 
-
 <footer class="rodape">
+  <div class="rodape-conteudo">
+    <div>
+      <h2>Câmara de Comércio</h2>
+      <p>123 Rua Principal</p>
+      <p>Campinas - SP</p>
+      <p>Brasil</p>
+    </div>
 
-        <div class="rodape-conteudo">
+    <div>
+      <p>Email: contato@camaracomercio.com</p>
+      <p>Telefone: (19) 99999-9999</p>
+      <p>WDD 231</p>
+    </div>
 
-            <div>
-                <h2>Câmara de Comércio</h2>
-                <p>123 Rua Principal</p>
-                <p>Campinas - SP</p>
-                <p>Brasil</p>
-            </div>
+    <div>
+      <p>&copy; <span id="ano"></span> Câmara de Comércio</p>
+      <p>Catiana Guillaume</p>
+      <p>Última modificação: <span id="ultima-modificacao"></span></p>
+    </div>
+  </div>
 
-            <div>
-                <p>Email: contato@camaracomercio.com</p>
-                <p>Telefone: (19) 99999-9999</p>
-                <p>WDD 231</p>
-            </div>
-
-            <div>
-                <p>&copy; <span id="ano"></span> Câmara de Comércio</p>
-                <p>Catana Guillaume</p>
-                <p>Última modificação: <span id="ultima-modificacao"></span></p>
-            </div>
-
-           </div>
-           <div class="social">
-           <a href="https://www.linkedin.com/showcase/spchamber/?originalSubdomain=br"=true">
-           <img src="imagens/linkedin.svg" alt="LinkedIn" width="50">
-           </a>
-           <a href="https://github.com/catiesud">
-           <img src="imagens/github.svg" alt="GitHub" width="50">
-           </a>
-           <a href="https://www.facebook.com/spchamberoficial/">
-           <img src="imagens/facebook.svg" alt="icone face" width="50">
-
-           </a>
-
-           </div>
-
-
+  <div class="social">
+    <a href="https://www.linkedin.com/showcase/spchamber/?originalSubdomain=br">
+      <img src="imagens/linkedin.svg" alt="LinkedIn" width="50">
+    </a>
+    <a href="https://github.com/catiesud">
+      <img src="imagens/github.svg" alt="GitHub" width="50">
+    </a>
+    <a href="https://www.facebook.com/spchamberoficial/">
+      <img src="imagens/facebook.svg" alt="Facebook" width="50">
+    </a>
+  </div>
 </footer>
 
 </body>
