@@ -1,6 +1,6 @@
 [
     {
-        "imagem": "imagens/pintura360.jpeg",
+        "imagem": "imagens/hero-pintura.jpeg",
         "nome": "Pintura 360",
         "endereco": "Rua das Acácias, 2154 - Campinas-SP 13090-490",
         "telefone": "(11) 96174-7566",
@@ -9,7 +9,7 @@
         "info": "Especializada em pintura residencial e comercial."
     },
     {
-        "imagem": "imagens/pintura360.jpeg",
+        "imagem": "imagens/jn-hidralica-cartao.jpeg",
         "nome": "JN Hidraulica",
         "endereco": "Av. das Nações, 1490 - São Paulo-SP 30140-150",
         "telefone": "(11) 99999-9999",
@@ -18,8 +18,8 @@
         "info": "Empresa especializada em soluções para encanamento."
     },
     {
-        "imagem": "imagens/pintura360.jpeg",
-        "nome": "WebMakers Studio",
+        "imagem": "imagens/itau.png",
+        "nome": "WebMakers Swdd231/camara/imagens/itau.pngtudio",
         "endereco": "Rua Itamarati, 3401 - Brasília-DF 72800-110",
         "telefone": "(61) 3647-1922",
         "site": "https://www.webmakers.com.br",
