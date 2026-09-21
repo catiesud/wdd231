@@ -19,21 +19,21 @@
     },
     {
         "imagem": "imagens/itau.png",
-        "nome": "WebMakers Swdd231/camara/imagens/itau.pngtudio",
+        "nome": "Itau S.A",
         "endereco": "Rua Itamarati, 3401 - Brasília-DF 72800-110",
-        "telefone": "(61) 3647-1922",
-        "site": "https://www.webmakers.com.br",
+        "telefone": "(0800) 7070-7070",
+        "site": "https://www.itau.com.br/",
         "nivel": 1,
-        "info": "Estúdio de desenvolvimento web e marketing digital."
+        "info": "Instituiçao fimanceira localizada em São Paulo ."
     },
     {
-        "imagem": "imagens/hero-pintura.jpeg",
-        "nome": "DesignHub Criativo",
-        "endereco": "Av. Central, 1090 - Curitiba-PR 80230-000",
-        "telefone": "(41) 3521-6543",
-        "site": "https://www.designhub.cr",
+        "imagem": "imagens/fretebras.jpg",
+        "nome": "Fretebras",
+        "endereco": "Av. Dr. Chucri Zaidan, 1240 Chácara Santo Antônio, São Paulo - SP | 04711-130",
+        "telefone": "(11) 3521-6543",
+        "site": "https://www.fretebras.com.br",
         "nivel": 2,
-        "info": "Consultoria em design de produtos e UX/UI."
+        "info": "empresa de transporte terreste."
     },
     {
         "imagem": "imagens/hero-pintura.jpeg",
