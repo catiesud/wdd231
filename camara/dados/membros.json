@@ -27,7 +27,7 @@
         "info": "Estúdio de desenvolvimento web e marketing digital."
     },
     {
-        "imagem": "imagens/designhub.png",
+        "imagem": "imagens/hero-pintura.jpeg",
         "nome": "DesignHub Criativo",
         "endereco": "Av. Central, 1090 - Curitiba-PR 80230-000",
         "telefone": "(41) 3521-6543",
@@ -36,7 +36,7 @@
         "info": "Consultoria em design de produtos e UX/UI."
     },
     {
-        "imagem": "imagens/codenova.png",
+        "imagem": "imagens/hero-pintura.jpeg",
         "nome": "CodeNova Sistemas",
         "endereco": "Rua das Flores, 1980 - Porto Alegre-RS 90560-050",
         "telefone": "(51) 3647-1921",
@@ -45,7 +45,7 @@
         "info": "Desenvolvimento de sistemas corporativos e ERP."
     },
     {
-        "imagem": "imagens/visiontech.png",
+        "imagem": "imagens/jn-hidralica-cartao.jpeg",
         "nome": "VisionTech Soluções",
         "endereco": "Av. Amazonas, 467 - Manaus-AM 69037-000",
         "telefone": "(92) 3647-1921",
@@ -54,7 +54,7 @@
         "info": "Tecnologia aplicada a soluções empresariais e IoT."
     },
     {
-        "imagem": "imagens/creativeflow.png",
+        "imagem": "imagens/jn-hidralica-cartao.jpeg",
         "nome": "CreativeFlow Mídia",
         "endereco": "Rua Paulista, 400 - São Paulo-SP 04040-004",
         "telefone": "(11) 3647-1921",
