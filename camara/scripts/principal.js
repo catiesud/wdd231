@@ -194,7 +194,7 @@ carregarMembros();
 
 
 
-const apiKey = "SUA_CHAVE_API";
+const apiKey = "c5d89ab9def893c4973f6e9b1a329f36";
 const city = "São Paulo";
 const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric&lang=pt_br`;
 

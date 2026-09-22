@@ -1,11 +1,167 @@
+
+/* Reset básico */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.cabecalho, .rodape {
-    background-color: #238992;
-    color: white;
-    border-bottom: 4px solid #f4b942;
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Cabeçalho e rodapé */
+header, footer {
+  background-color: #238992;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 4px solid #f4b942;
+}
+
+header img {
+  max-width: 150px;
+}
+
+header h1 {
+  margin: 0.5rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #f4b942;
+}
+
+/* Hero image */
+.hero {
+  position: relative;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(35, 137, 146, 0.8);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #f4b942;
+  color: #238992;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #238992;
+  color: white;
+}
+
+/* Seções principais */
+section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.eventos ul {
+  list-style: disc;
+  margin-left: 2rem;
+}
+
+.tempo, .destaques {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* Cards de empresas */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 2px solid #238992;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  color: #238992;
+}
+
+/* Rodapé */
+footer {
+  border-top: 4px solid #f4b942;
+  margin-top: 2rem;
+}
+
+footer .social {
+  margin-top: 1rem;
+}
+
+footer .social a img {
+  margin: 0 0.5rem;
+  transition: transform 0.3s;
+}
+
+footer .social a img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero-text {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .cta-button {
+    padding: 0.5rem 1rem;
+  }
 }
