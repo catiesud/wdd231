@@ -190,3 +190,20 @@ document.querySelector("#ultima-modificacao").textContent =
 // -----------------------------
 
 carregarMembros();
+
+
+
+
+const apiKey = "SUA_CHAVE_API";
+const city = "São Paulo";
+const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric&lang=pt_br`;
+
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById("temp").textContent = data.list[0].main.temp.toFixed(1);
+    document.getElementById("desc").textContent = data.list[0].weather[0].description;
+
++
+
++

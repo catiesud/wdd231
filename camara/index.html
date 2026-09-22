@@ -1,14 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Diretório</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="durante as proximas semanas a pagia da Câmara de Comércio de São Paulo sera desenvolvida.">
   <meta name="author" content="Catiana Guillaume">
   <meta property="og:title" content="Camara de Comercio de São Paulo - WDD231" />
 
+  <title>Camara do Comercio de São Paulo | WDD231 C</title>
+
+  
 
   <!-- Open Graph para redes sociais -->
   <meta property="og:description" content="Conheça mais sobre Catiana Guillaume, estudante de Engenharia Civil e Desenvolvimento de Software, apaixonada por tecnologia e comércio exterior.">
@@ -17,8 +19,8 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
 
-  <link rel="stylesheet" href="estilos/base.css9">
-  <link rel="stylesheet" href="estilos/basegrande.css">
+  <link rel="stylesheet" href="estilos/camaragrande.css">
+  <link rel="stylesheet" href="estilos/camera.css">
   <link rel="stylesheet" href="estilos/normalize.css">
   <link rel="icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,42 +28,77 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <script src="scripts/principal.js" defer></script>
+  <script src="scripts/camara.js" defer></script>
+
+  <title>Câmara de Comércio - Página Inicial</title>
+  <link rel="stylesheet" href="estilos/base.css">
+  <link rel="stylesheet" href="estilos/basegrande.css">
+  <link rel="stylesheet" href="estilos/normalize.css">
+  <script defer src="scripts/weather.js"></script>
+  <script defer src="scripts/principal.js"></script>
 </head>
 <body>
-  <header class="hero">
-    <div class="overlay"></div>
-    <div class="content">
+  <!-- Cabeçalho -->
+  <header>
       <img src="imagens/logo-comercio.jpg" alt="logo câmara do comércio de São Paulo" width="200">
-      <h1>Câmara de Comércio de São Paulo</h1>
-      <p>Conectando empresas, fortalecendo oportunidades.</p>
-      <nav>
-        <ul>
-          <li><a href="#pagina-inicial">Início</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#diretorio">Dirétorio</a></li>
-          <li><a href="#associe-se">Associe-se</a></li>
 
-        </ul>
-      </nav>
-    </div>
+    <h1>Câmara de Comércio</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="diretorio.html">Diretório</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="associar.html">Associe-se</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <section id="pagina-inicial">
-      <h2>Página Inicial</h2>
-    </section>
+  <!-- Imagem principal (Hero Image) -->
+  <section class="hero">
+    <img src="imagens/sp-hero.jpg"logo Câmara de Comércio width="200">
+    <div class="hero-text">
+      <h2>Bem-vindo à nossa comunidade!</h2>
+      <p>Conectando empresas e fortalecendo oportunidades.</p>
+      <a href="associar.html" class="cta-button">Associe-se Agora</a>
+    </div>
+  </section>
 
-    <section id="projeto-camara">
-      <h2>Projeto Câmara</h2>
-    </section>
+  <!-- Seção de eventos atuais -->
+  <section class="eventos">
+    <h2>Eventos Atuais</h2>
+    <ul>
+      <li>Workshop de Networking - 25 de Setembro</li>
+      <li>Feira de Negócios Locais - 10 de Outubro</li>
+      <li>Palestra sobre Inovação - 20 de Outubro</li>
+    </ul>
+  </section>
 
-    <section id="projeto-final">
-      <h2>Projeto Final</h2>
-    </section>
-  </main>
+  <!-- Seção de tempo -->
+  <section class="tempo">
+    <h2>Previsão do Tempo</h2>
+    <div id="weather">
+      <!-- Dados preenchidos via API OpenWeatherMap -->
+      <p>Temperatura atual: <span id="temp"></span>°C</p>
+      <p>Condição: <span id="desc"></span></p>
+      <div id="forecast"></div>
+    </div>
+  </section>
 
+  <!-- Empresas em destaque -->
+  <section class="destaques">
+    <h2>Empresas em Destaque</h2>
+    <div id="featured-members" class="cards">
+      <!-- Preenchido dinamicamente via JSON -->
+    </div>
+  </section>
+
+  <!-- Rodapé -->
   <footer>
-    <p>© 2026 - 🌻 Catiana Guillaume 🌻 - São Paulo, Brasil</p>
+
+    <p>&copy; 2026 Câmara de Comércio - Todos os direitos reservados</p>
+    <p>Contato: contato@camara.com.br | Tel: (11) 1234-5678</p>
+   <p>© 2026 - 🌻 Catiana Guillaume 🌻 - São Paulo, Brasil</p>
     <p>Última Modificação: <span id="ultima-modificacao"></span></p>
     <div class="social">
       <a href="https://www.linkedin.com/showcase/spchamber/?originalSubdomain=br">
@@ -74,11 +111,13 @@
         <img src="imagens/facebook.svg" alt="Facebook" width="50">
       </a>
     </div>
+
     <script>
       const data = new Date(document.lastModified);
       const formatada = data.toLocaleString("pt-BR");
       document.getElementById("ultima-modificacao").textContent = formatada;
     </script>
+
   </footer>
 </body>
 </html>
