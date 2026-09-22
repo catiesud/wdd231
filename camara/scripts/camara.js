@@ -18,10 +18,10 @@ fetch(url)
   .catch(err => console.error(err));
 
 
-  fetch("data/members.json")
+  fetch("data/membros.json")
   .then(response => response.json())
-  .then(members => {
-    const featured = members.filter(m => m.level === "Ouro" || m.level === "Prata");
+  .then(membros => {
+    const featured = membros.filter(m => m.level === "Ouro" || m.level === "Prata");
     const random = featured.sort(() => 0.5 - Math.random()).slice(0, 3);
 
     const container = document.getElementById("featured-members");
@@ -38,3 +38,5 @@ fetch(url)
       `;
     });
   });
+
+  
