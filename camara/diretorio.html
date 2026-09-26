@@ -15,7 +15,7 @@
   <!-- Open Graph -->
   <meta property="og:title" content="Pagina Inicial | Câmara de Comércio">
   <meta property="og:description" content="Conheça as empresas associadas à Câmara de Comércio.">
-  <meta property="og:image" content="https://seusite.com/camara/imagens/og-image.jpg">
+  <meta property="og:image" content="https://raw.com/camara/imagens/og-image.png" c:\Users\catia\OneDrive\Desktop\BYU BLOCK5\wdd231\wdd231\camara\imagens\logo-comercio .png>
   <meta property="og:url" content="https://seusite.com/camara/diretorio.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
@@ -75,40 +75,30 @@
   </section>
 </main>
 
-<footer class="rodape">
-  <div class="rodape-conteudo">
-    <div>
-      <h2>Câmara de Comércio</h2>
-      <p>123 Rua Principal</p>
-      <p>Campinas - SP</p>
-      <p>Brasil</p>
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <p>&copy; 2026 Câmara de Comércio - Todos os direitos reservados</p>
+    <p>Contato: contato@camara.com.br | Tel: (11) 1234-5678</p>
+    <p>© 2026 - 🌻 Catiana Guillaume 🌻 - São Paulo, Brasil</p>
+    <p>Última Modificação: <span id="ultima-modificacao"></span></p>
+    <div class="social">
+      <a href="https://www.linkedin.com/showcase/spchamber/?originalSubdomain=br">
+        <img src="imagens/linkedin.svg" alt="LinkedIn" width="50">
+      </a>
+      <a href="https://github.com/catiesud">
+        <img src="imagens/github.svg" alt="GitHub" width="50">
+      </a>
+      <a href="https://www.facebook.com/spchamberoficial/">
+        <img src="imagens/facebook.svg" alt="Facebook" width="50">
+      </a>
     </div>
 
-    <div>
-      <p>Email: contato@camaracomercio.com</p>
-      <p>Telefone: (19) 99999-9999</p>
-      <p>WDD 231</p>
-    </div>
-
-    <div>
-      <p>&copy; <span id="ano"></span> Câmara de Comércio</p>
-      <p>Catiana Guillaume</p>
-      <p>Última modificação: <span id="ultima-modificacao"></span></p>
-    </div>
-  </div>
-
-  <div class="social">
-    <a href="https://www.linkedin.com/showcase/spchamber/?originalSubdomain=br">
-      <img src="imagens/linkedin.svg" alt="LinkedIn" width="50">
-    </a>
-    <a href="https://github.com/catiesud">
-      <img src="imagens/github.svg" alt="GitHub" width="50">
-    </a>
-    <a href="https://www.facebook.com/spchamberoficial/">
-      <img src="imagens/facebook.svg" alt="Facebook" width="50">
-    </a>
-  </div>
-</footer>
+    <script>
+      const data = new Date(document.lastModified);
+      const formatada = data.toLocaleString("pt-BR");
+      document.getElementById("ultima-modificacao").textContent = formatada;
+    </script>
+  </footer>
 
 </body>
 </html>

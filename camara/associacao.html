@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Associação - Câmara</title>
+  <link rel="stylesheet" href="estilos/associacao.css">
+  <link rel="stylesheet" href="diretorio.html">
+  <link rel="stylesheet" href="agradecimento.html">
+  <link rel="icon" href="favicon.ico">
+
+ <style>
+    /* Layout responsivo */
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+      }
+      .formulario {
+        flex: 2;
+      }
+      .cartoes {
+        flex: 1;
+        margin-left: 20px;
+      }
+    }
+
+    /* Cartões com animação inicial */
+    .cartao {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      background: #f9f9f9;
+      opacity: 0;
+      animation: aparecer 2s forwards;
+    }
+    .cartao:nth-child(1) { animation-delay: 0.5s; }
+    .cartao:nth-child(2) { animation-delay: 1s; }
+    .cartao:nth-child(3) { animation-delay: 1.5s; }
+    .cartao:nth-child(4) { animation-delay: 2s; }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Estilo modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+    .modal-conteudo {
+      background: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      width: 80%;
+      border-radius: 8px;
+    }
+    .fechar {
+      float: right;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header class="cabecalho">
+    <img src="imagens/logo-comercio.jpg" alt="Logo da Câmara de Comércio de São Paulo" width="200">
+    <h1>associação da Câmara de Comércio</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="diretorio.html">Diretório</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="associacao.html">Associe-se</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section class="formulario">
+      <form method="get" action="agradecimento.html">
+        <label>
+          Nome do candidato:
+          <input type="text" name="nome" title="Nome do candidato" autocomplete="given-name" required>
+        </label><br>
+
+        <label>
+          Sobrenome do candidato:
+          <input type="text" name="sobrenome" title="Sobrenome do candidato" autocomplete="family-name" required>
+        </label><br>
+
+        <label>
+          Cargo na organização:
+          <input type="text" name="cargo" title="Cargo na organização" autocomplete="organization-title"
+                 pattern="[A-Za-zÀ-ÿ\\-\\s]{7,}">
+        </label><br>
+
+        <label>
+          Endereço de e-mail:
+          <input type="email" name="email" title="E-mail do candidato" autocomplete="email"
+                 placeholder="exemplo@dominio.com" required>
+        </label><br>
+
+        <label>
+          Número de celular:
+          <input type="tel" name="celular" title="Celular do candidato" autocomplete="tel" required>
+        </label><br>
+
+        <label>
+          Nome da empresa/organização:
+          <input type="text" name="organizacao" title="Organização" autocomplete="organization" required>
+        </label><br>
+
+        <label>
+          Nível de associação:
+          <select name="nivel" title="Nível de associação" required>
+            <option value="np">Associação NP (sem fins lucrativos)</option>
+            <option value="bronze">Associação Bronze</option>
+            <option value="silver">Associação Prata</option>
+            <option value="gold">Associação Ouro</option>
+          </select>
+        </label><br>
+
+        <label>
+          Descrição da atividade/organização:
+          <textarea name="descricao" title="Descrição da atividade"></textarea>
+        </label><br>
+
+        <input type="hidden" name="registro" id="registro">
+
+        <button type="submit">Enviar inscrição</button>
+      </form>
+    </section>
+
+    <aside class="cartoes">
+      <div class="cartao">
+        <h3>Associação NP</h3>
+        <a href="#modal-np">Mais informações</a>
+      </div>
+      <div class="cartao">
+        <h3>Associação Bronze</h3>
+        <a href="#modal-bronze">Mais informações</a>
+      </div>
+      <div class="cartao">
+        <h3>Associação Prata</h3>
+        <a href="#modal-silver">Mais informações</a>
+      </div>
+      <div class="cartao">
+        <h3>Associação Ouro</h3>
+        <a href="#modal-gold">Mais informações</a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Modais -->
+  <div id="modal-np" class="modal">
+    <div class="modal-conteudo">
+      <span class="fechar" onclick="fecharModal('modal-np')">&times;</span>
+      <h2>Benefícios NP</h2>
+      <p>Sem taxa, participação em eventos comunitários.</p>
+    </div>
+  </div>
+
+  <div id="modal-bronze" class="modal">
+    <div class="modal-conteudo">
+      <span class="fechar" onclick="fecharModal('modal-bronze')">&times;</span>
+      <h2>Benefícios Bronze</h2>
+      <p>Eventos básicos, treinamentos introdutórios.</p>
+    </div>
+  </div>
+
+  <div id="modal-silver" class="modal">
+    <div class="modal-conteudo">
+      <span class="fechar" onclick="fecharModal('modal-silver')">&times;</span>
+      <h2>Benefícios Prata</h2>
+      <p>Eventos especiais, descontos em atividades.</p>
+    </div>
+  </div>
+
+  <div id="modal-gold" class="modal">
+    <div class="modal-conteudo">
+      <span class="fechar" onclick="fecharModal('modal-gold')">&times;</span>
+      <h2>Benefícios Ouro</h2>
+      <p>Treinamentos avançados, publicidade destacada, grandes descontos.</p>
+    </div>
+    </div>
+
+
+    <!-- Rodapé -->
+  <footer class="rodape">
+    <p>&copy; 2026 Câmara de Comércio - Todos os direitos reservados</p>
+    <p>Contato: contato@camara.com.br | Tel: (11) 1234-5678</p>
+    <p>© 2026 - 🌻 Catiana Guillaume 🌻 - São Paulo, Brasil</p>
+    <p>Última Modificação: <span id="ultima-modificacao"></span></p>
+    <div class="social">
+      <a href="https://www.linkedin.com/showcase/spchamber/?originalSubdomain=br">
+        <img src="imagens/linkedin.svg" alt="LinkedIn" width="50">
+      </a>
+      <a href="https://github.com/catiesud">
+        <img src="imagens/github.svg" alt="GitHub" width="50">
+      </a>
+      <a href="https://www.facebook.com/spchamberoficial/">
+        <img src="imagens/facebook.svg" alt="Facebook" width="50">
+      </a>
+    </div>
+
+    <script>
+      const data = new Date(document.lastModified);
+      const formatada = data.toLocaleString("pt-BR");
+      document.getElementById("ultima-modificacao").textContent = formatada;
+    </script>
+  </footer>
+
+  </script>
+</body>
+</html>

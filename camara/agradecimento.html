@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Agradecimento - Câmara</title>
+  <link rel="stylesheet" href="estilos/associacao.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <header>
+    <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <img src="imagens/logo-comercio.jpg" alt="Logo da Câmara de Comércio de São Paulo" width="200">
+    <h1>Câmara - Obrigado pela inscrição</h1> 
+   <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="diretorio.html">Diretório</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="associacao.html">Associe-se</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+ 
+  </header>
+
+  <main>
+
+    <h2>Dados enviados:</h2>
+    <ul>
+      <li><strong>Nome:</strong> <span id="nome"></span></li>
+      <li><strong>Sobrenome:</strong> <span id="sobrenome"></span></li>
+      <li><strong>E-mail:</strong> <span id="email"></span></li>
+      <li><strong>Celular:</strong> <span id="celular"></span></li>
+      <li><strong>Organização:</strong> <span id="organizacao"></span></li>
+      <li><strong>Data/Hora:</strong> <span id="registro"></span></li>
+    </ul>
+  </main>
+
+   <!-- Rodapé -->
+  <footer class="rodape">
+    <p>&copy; 2026 Câmara de Comércio - Todos os direitos reservados</p>
+    <p>Contato: contato@camara.com.br | Tel: (11) 1234-5678</p>
+    <p>© 2026 - 🌻 Catiana Guillaume 🌻 - São Paulo, Brasil</p>
+    <p>Última Modificação: <span id="ultima-modificacao"></span></p>
+    <div class="social">
+      <a href="https://www.linkedin.com/showcase/spchamber/?originalSubdomain=br">
+        <img src="imagens/linkedin.svg" alt="LinkedIn" width="50">
+      </a>
+      <a href="https://github.com/catiesud">
+        <img src="imagens/github.svg" alt="GitHub" width="50">
+      </a>
+      <a href="https://www.facebook.com/spchamberoficial/">
+        <img src="imagens/facebook.svg" alt="Facebook" width="50">
+      </a>
+    </div>
+
+    <script>
+      const data = new Date(document.lastModified);
+      const formatada = data.toLocaleString("pt-BR");
+      document.getElementById("ultima-modificacao").textContent = formatada;
+    </script>
+  </footer>
+
+  <script>
+    // Captura parâmetros da URL
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("nome").textContent = params.get("nome");
+    document.getElementById("sobrenome").textContent = params.get("sobrenome");
+    document.getElementById("email").textContent = params.get("email");
+    document.getElementById("celular").textContent = params.get("celular");
+    document.getElementById("organizacao").textContent = params.get("organizacao");
+    document
+    
+  </script>
+</body>
+</html>
