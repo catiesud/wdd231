@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
- <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Associe-se à Câmara de Comércio de São Paulo.">
@@ -19,18 +18,15 @@
   <link rel="stylesheet" href="estilos/associacao.css">
   <link rel="icon" href="favicon.ico">
 
-   <!-- Scripts -->
+  <!-- Scripts -->
   <script src="scripts/camara.js" defer></script>
   <script src="scripts/weather.js" defer></script>
   <script src="scripts/principal.js" defer></script>
 </head>
-
-
-</head>
 <body>
   <header class="cabecalho">
     <img src="imagens/logo-comercio.jpg" alt="Logo da Câmara de Comércio de São Paulo" width="200">
-    <h1>associação da Câmara de Comércio</h1>
+    <h1>Associação da Câmara de Comércio</h1>
     <nav>
       <ul>
         <li><a href="index.html">Início</a></li>
@@ -41,119 +37,123 @@
       </ul>
     </nav>
   </header>
-<main>
-  <div class="container">
-    <section class="formulario">
-      <form method="get" action="agradecimento.html">
-        <label>
-          Nome do candidato:
-          <input type="text" name="nome" title="Nome do candidato" autocomplete="given-name" required>
-        </label><br>
 
-        <label>
-          Sobrenome do candidato:
-          <input type="text" name="sobrenome" title="Sobrenome do candidato" autocomplete="family-name" required>
-        </label><br>
+  <main>
+    <div class="container">
+      <section class="formulario">
+        <h2>Formulário de Associação</h2>
+        <form method="get" action="agradecimento.html">
+          <label>
+            Nome do candidato:
+            <input type="text" name="nome" title="Nome do candidato" autocomplete="given-name" required>
+          </label><br>
 
-        <label>
-          Cargo na organização:
-          <input type="text" name="cargo" title="Cargo na organização" autocomplete="organization-title"
-                 pattern="[A-Za-zÀ-ÿ\\-\\s]{7,}">
-        </label><br>
+          <label>
+            Sobrenome do candidato:
+            <input type="text" name="sobrenome" title="Sobrenome do candidato" autocomplete="family-name" required>
+          </label><br>
 
-        <label>
-          Endereço de e-mail:
-          <input type="email" name="email" title="E-mail do candidato" autocomplete="email"
-                 placeholder="exemplo@dominio.com" required>
-        </label><br>
+          <label>
+            Cargo na organização:
+            <input type="text" name="cargo" title="Cargo na organização" autocomplete="organization-title"
+                   pattern="[A-Za-zÀ-ÿ\\-\\s]{7,}">
+          </label><br>
 
-        <label>
-          Número de celular:
-          <input type="tel" name="celular" title="Celular do candidato" autocomplete="tel" required>
-        </label><br>
+          <label>
+            Endereço de e-mail:
+            <input type="email" name="email" title="E-mail do candidato" autocomplete="email"
+                   placeholder="exemplo@dominio.com" required>
+          </label><br>
 
-        <label>
-          Nome da empresa/organização:
-          <input type="text" name="organizacao" title="Organização" autocomplete="organization" required>
-        </label><br>
+          <label>
+            Número de celular:
+            <input type="tel" name="celular" title="Celular do candidato" autocomplete="tel" required>
+          </label><br>
 
-        <label>
-          Nível de associação:
-          <select name="nivel" title="Nível de associação" required>
-            <option value="np">Associação NP (sem fins lucrativos)</option>
-            <option value="bronze">Associação Bronze</option>
-            <option value="silver">Associação Prata</option>
-            <option value="gold">Associação Ouro</option>
-          </select>
-        </label><br>
+          <label>
+            Nome da empresa/organização:
+            <input type="text" name="organizacao" title="Organização" autocomplete="organization" required>
+          </label><br>
 
-        <label>
-          Descrição da atividade/organização:
-          <textarea name="descricao" title="Descrição da atividade"></textarea>
-        </label><br>
+          <label>
+            Nível de associação:
+            <select name="nivel" title="Nível de associação" required>
+              <option value="" disabled selected>Selecione um nível</option>
+              <option value="np">Associação NP (sem fins lucrativos)</option>
+              <option value="bronze">Associação Bronze</option>
+              <option value="silver">Associação Prata</option>
+              <option value="gold">Associação Ouro</option>
+            </select>
+          </label><br>
 
-        <input type="hidden" name="registro" id="registro">
+          <label>
+            Descrição da atividade/organização:
+            <textarea name="descricao" title="Descrição da atividade"></textarea>
+          </label><br>
 
-        <button type="submit">Enviar inscrição</button>
-      </form>
-    </section>
+          <input type="hidden" name="registro" id="registro">
+          <button type="submit" class="botao-enviar">Enviar inscrição</button>
 
-    <aside class="cartoes">
-      <div class="cartao">
-        <h3>Associação NP</h3>
-        <a href="#modal-np">Mais informações</a>
+
+        </form>
+      </section>
+
+      <aside class="cartoes">
+        <h2>Níveis de Associação</h2>
+        <div class="cartao">
+          <h3>Associação NP</h3>
+          <a href="#modal-np">Mais informações</a>
+        </div>
+        <div class="cartao">
+          <h3>Associação Bronze</h3>
+          <a href="#modal-bronze">Mais informações</a>
+        </div>
+        <div class="cartao">
+          <h3>Associação Prata</h3>
+          <a href="#modal-silver">Mais informações</a>
+        </div>
+        <div class="cartao">
+          <h3>Associação Ouro</h3>
+          <a href="#modal-gold">Mais informações</a>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Modais -->
+    <div id="modal-np" class="modal">
+      <div class="modal-conteudo">
+        <span class="fechar" onclick="fecharModal('modal-np')">&times;</span>
+        <h2>Benefícios NP</h2>
+        <p>Sem taxa, participação em eventos comunitários.</p>
       </div>
-      <div class="cartao">
-        <h3>Associação Bronze</h3>
-        <a href="#modal-bronze">Mais informações</a>
+    </div>
+
+    <div id="modal-bronze" class="modal">
+      <div class="modal-conteudo">
+        <span class="fechar" onclick="fecharModal('modal-bronze')">&times;</span>
+        <h2>Benefícios Bronze</h2>
+        <p>Eventos básicos, treinamentos introdutórios.</p>
       </div>
-      <div class="cartao">
-        <h3>Associação Prata</h3>
-        <a href="#modal-silver">Mais informações</a>
+    </div>
+
+    <div id="modal-silver" class="modal">
+      <div class="modal-conteudo">
+        <span class="fechar" onclick="fecharModal('modal-silver')">&times;</span>
+        <h2>Benefícios Prata</h2>
+        <p>Eventos especiais, descontos em atividades.</p>
       </div>
-      <div class="cartao">
-        <h3>Associação Ouro</h3>
-        <a href="#modal-gold">Mais informações</a>
+    </div>
+
+    <div id="modal-gold" class="modal">
+      <div class="modal-conteudo">
+        <span class="fechar" onclick="fecharModal('modal-gold')">&times;</span>
+        <h2>Benefícios Ouro</h2>
+        <p>Treinamentos avançados, publicidade destacada, grandes descontos.</p>
       </div>
-    </aside>
-  </div>
-
-  <!-- Modais -->
-  <div id="modal-np" class="modal">
-    <div class="modal-conteudo">
-      <span class="fechar" onclick="fecharModal('modal-np')">&times;</span>
-      <h2>Benefícios NP</h2>
-      <p>Sem taxa, participação em eventos comunitários.</p>
     </div>
-  </div>
+  </main>
 
-  <div id="modal-bronze" class="modal">
-    <div class="modal-conteudo">
-      <span class="fechar" onclick="fecharModal('modal-bronze')">&times;</span>
-      <h2>Benefícios Bronze</h2>
-      <p>Eventos básicos, treinamentos introdutórios.</p>
-    </div>
-  </div>
-
-  <div id="modal-silver" class="modal">
-    <div class="modal-conteudo">
-      <span class="fechar" onclick="fecharModal('modal-silver')">&times;</span>
-      <h2>Benefícios Prata</h2>
-      <p>Eventos especiais, descontos em atividades.</p>
-    </div>
-  </div>
-
-  <div id="modal-gold" class="modal">
-    <div class="modal-conteudo">
-      <span class="fechar" onclick="fecharModal('modal-gold')">&times;</span>
-      <h2>Benefícios Ouro</h2>
-      <p>Treinamentos avançados, publicidade destacada, grandes descontos.</p>
-    </div>
-    </div>
-</main>
-
-
-    <!-- Rodapé -->
+  <!-- Rodapé -->
   <footer class="rodape">
     <p>&copy; 2026 Câmara de Comércio - Todos os direitos reservados</p>
     <p>Contato: contato@camara.com.br | Tel: (11) 1234-5678</p>
@@ -177,7 +177,5 @@
       document.getElementById("ultima-modificacao").textContent = formatada;
     </script>
   </footer>
-
-  </script>
 </body>
 </html>

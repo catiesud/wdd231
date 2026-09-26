@@ -90,3 +90,15 @@ header h1 {
       font-weight: bold;
     }
   
+    .botao-enviar {
+  background-color: hsl(99, 92%, 34%);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.botao-enviar:hover {
+  background-color: lab(21.01% 37.63 13.25);
+}
