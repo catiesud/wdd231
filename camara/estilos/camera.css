@@ -165,3 +165,29 @@ footer .social a img:hover {
     padding: 0.5rem 1rem;
   }
 }
+/* Garante que o layout não ultrapasse a largura da tela */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Ajusta elementos grandes para caber em 100% da largura */
+img, div, section {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+#menu {
+  list-style: none;
+  padding: 0;
+}
+
+#menu li {
+  margin: 10px 0;
+}
+
