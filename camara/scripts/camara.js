@@ -1,3 +1,4 @@
+// Weather API
 const apiKey = "c5d89ab9def893c4973f6e9b1a329f36";
 const city = "São Paulo";
 const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric&lang=pt_br`;
@@ -17,8 +18,8 @@ fetch(url)
   })
   .catch(err => console.error(err));
 
-
-  fetch("data/membros.json")
+// Featured Members
+fetch("data/membros.json")
   .then(response => response.json())
   .then(membros => {
     const featured = membros.filter(m => m.level === "Ouro" || m.level === "Prata");
@@ -39,10 +40,39 @@ fetch(url)
     });
   });
 
-  document.getElementById("menu-btn").addEventListener("click", function() {
-  const menu = document.getElementById("menu");
-  menu.classList.toggle("hidden");
+// Menu toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menu-btn");
+  if (menuBtn) {
+    menuBtn.addEventListener("click", () => {
+      const menu = document.getElementById("menu");
+      if (menu) {
+        menu.classList.toggle("hidden");
+      }
+    });
+  }
 });
 
+// Modais (fechar)
+document.addEventListener("DOMContentLoaded", () => {
+  const fecharBtns = document.querySelectorAll(".fechar");
+  fecharBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const modalId = btn.getAttribute("data-modal");
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+});
 
-  
+// Última modificação no rodapé
+document.addEventListener("DOMContentLoaded", () => {
+  const data = new Date(document.lastModified);
+  const formatada = data.toLocaleString("pt-BR");
+  const ultima = document.getElementById("ultima-modificacao");
+  if (ultima) {
+    ultima.textContent = formatada;
+  }
+});
