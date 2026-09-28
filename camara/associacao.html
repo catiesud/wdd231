@@ -76,16 +76,14 @@
             <input type="text" name="organizacao" title="Organização" autocomplete="organization" required>
           </label><br>
 
-          <label>
-            Nível de associação:
-            <select name="nivel" title="Nível de associação" required>
-              <option value="" disabled selected>Selecione um nível</option>
-              <option value="np">Associação NP (sem fins lucrativos)</option>
-              <option value="bronze">Associação Bronze</option>
-              <option value="prata">Associação Prata</option>
-              <option value="ouro">Associação Ouro</option>
-            </select>
-          </label><br>
+          <label for="membership">Nível de Membresia:</label>
+<select id="membership" name="membership" required>
+  <option value="np">NP</option>
+  <option value="bronze">Bronze</option>
+  <option value="silver">Silver</option>
+  <option value="gold">Gold</option>
+</select>
+
 
           <label>
             Descrição da atividade/organização:
