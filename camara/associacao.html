@@ -3,22 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Associe sua empresa à Câmara de Comércio de São Paulo, para garantir seus beneficios, escolha planos NP, ouro, prata ou bronze">
+  <meta name="description" content="Associe sua empresa à Câmara de Comércio de São Paulo, para garantir seus benefícios, escolha planos NP, ouro, prata ou bronze">
   <meta name="author" content="Catiana Guillaume">
-
   <!-- Open Graph para redes sociais -->
   <meta property="og:title" content="Câmara de Comércio de São Paulo - WDD231">
-  <meta property="og:description" content="Associe sua empresa à Câmara de Comércio de São Paulo, para garantir seus beneficios, escolha planos NP, ouro, prata ou bronze.">
+  <meta property="og:description" content="Associe sua empresa à Câmara de Comércio de São Paulo, para garantir seus benefícios, escolha planos NP, ouro, prata ou bronze.">
   <meta property="og:image" content="https://catiesud.github.io/wdd231/camara/imagens/camara-comercio.png">
-
   <meta property="og:url" content="https://www.facebook.com/share/182e4hbTg9/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-
-  <title>Associe-se a Câmara de Comércio de São Paulo</title>
+  <title>Associe-se à Câmara de Comércio de São Paulo</title>
   <link rel="stylesheet" href="estilos/associacao.css">
   <link rel="icon" href="favicon.ico">
-
   <!-- Scripts -->
   <script src="scripts/camara.js" defer></script>
   <script src="scripts/weather.js" defer></script>
@@ -38,65 +34,45 @@
       </ul>
     </nav>
   </header>
-
   <main>
     <div class="container">
       <section class="formulario">
         <h2>Formulário de Associação</h2>
         <form method="get" action="agradecimento.html">
-          <label>
-            Nome do candidato:
+          <label> Nome do candidato:
             <input type="text" name="nome" title="Nome do candidato" autocomplete="given-name" required>
           </label><br>
-
-          <label>
-            Sobrenome do candidato:
+          <label> Sobrenome do candidato:
             <input type="text" name="sobrenome" title="Sobrenome do candidato" autocomplete="family-name" required>
           </label><br>
-
-          <label>
-            Cargo na organização:
-            <input type="text" name="cargo" title="Cargo na organização" autocomplete="organization-title"
-                   pattern="[A-Za-zÀ-ÿ\\-\\s]{7,}">
+          <label> Cargo na organização:
+            <input type="text" name="cargo" title="Cargo na organização" autocomplete="organization-title" pattern="[A-Za-zÀ-ÿ\-\\s]{7,}">
           </label><br>
-
-          <label>
-            Endereço de e-mail:
-            <input type="email" name="email" title="E-mail do candidato" autocomplete="email"
-                   placeholder="exemplo@dominio.com" required>
+          <label> Endereço de e-mail:
+            <input type="email" name="email" title="E-mail do candidato" autocomplete="email" placeholder="exemplo@dominio.com" required>
           </label><br>
-
-          <label>
-            Número de celular:
+          <label> Número de celular:
             <input type="tel" name="celular" title="Celular do candidato" autocomplete="tel" required>
           </label><br>
-
-          <label>
-            Nome da empresa/organização:
+          <label> Nome da empresa/organização:
             <input type="text" name="organizacao" title="Organização" autocomplete="organization" required>
           </label><br>
 
           <label for="membership">Nível de Membresia:</label>
           <select id="membership" name="membership" required>
-          <option value="" disabled selected>Selecione um nível</option>
-          <option value="np">Np</option>
-          <option value="bronze">Bronze</option>
-          <option value="silver">Silver </option>
-          <option value="gold">Gold </option>
-       </select>
+            <option value="" disabled selected>Selecione um nível</option>
+            <option value="np">NP</option>
+            <option value="bronze">Bronze</option>
+            <option value="prata">Prata</option>
+            <option value="ouro">Ouro</option>
+          </select>
 
-
-
-
-          <label>
-            Descrição da atividade/organização:
+          <label> Descrição da atividade/organização:
             <textarea name="descricao" title="Descrição da atividade"></textarea>
           </label><br>
 
           <input type="hidden" name="registro" id="registro">
           <button type="submit" class="botao-enviar">Enviar inscrição</button>
-
-
         </form>
       </section>
 
@@ -112,11 +88,11 @@
         </div>
         <div class="cartao">
           <h3>Associação Prata</h3>
-          <a href="#modal-silver">Mais informações</a>
+          <a href="#modal-prata">Mais informações</a>
         </div>
         <div class="cartao">
           <h3>Associação Ouro</h3>
-          <a href="#modal-gold">Mais informações</a>
+          <a href="#modal-ouro">Mais informações</a>
         </div>
       </aside>
     </div>
@@ -172,7 +148,6 @@
         <img src="imagens/facebook.svg" alt="Facebook" width="50">
       </a>
     </div>
-
     <script>
       const data = new Date(document.lastModified);
       const formatada = data.toLocaleString("pt-BR");
