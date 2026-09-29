@@ -2,28 +2,40 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="página de agradecimento dos associados da Câmara de Comércio de São Paulo que esta sendo desenvolvida.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Associe sua empresa à Câmara de Comércio de São Paulo, para garantir seus benefícios, escolha planos NP, ouro, prata ou bronze">
   <meta name="author" content="Catiana Guillaume">
 
-  <!-- Open Graph para redes sociais -->
-  <meta property="og:title" content="Câmara de Comércio de São Paulo - WDD231" />
-  <meta property="og:description" content="Conheça mais sobre Catiana Guillaume, estudante de Engenharia Civil e Desenvolvimento de Software, apaixonada por tecnologia e comércio exterior.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Câmara de Comércio de São Paulo - WDD231">
+  <meta property="og:description" content="Associe sua empresa à Câmara de Comércio de São Paulo, para garantir seus benefícios, escolha planos NP, ouro, prata ou bronze.">
   <meta property="og:image" content="https://catiesud.github.io/wdd231/camara/imagens/camara-comercio.png">
   <meta property="og:url" content="https://www.facebook.com/share/182e4hbTg9/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <title>Agradecimento - Câmara</title>
+
+  <title>Associe-se à Câmara de Comércio de São Paulo</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="estilos/associacao.css">
+  <link rel="stylesheet" href="estilos/normalize.css">
   <link rel="icon" href="favicon.ico">
+
+  <!-- Scripts externos -->
+  <script src="scripts/camara.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/principal.js" defer></script>
 </head>
 <body>
-  <header>
-    <!-- Cabeçalho -->
   <header class="cabecalho">
     <img src="imagens/logo-comercio.jpg" alt="Logo da Câmara de Comércio de São Paulo" width="200">
-    <h1>Câmara - Obrigado pela inscrição</h1> 
-   <nav>
+    <h1>Associação da Câmara de Comércio</h1>
+    <nav id="navegacao">
       <ul>
         <li><a href="index.html">Início</a></li>
         <li><a href="diretorio.html">Diretório</a></li>
@@ -32,23 +44,21 @@
         <li><a href="sobre.html">Contato</a></li>
       </ul>
     </nav>
- 
   </header>
+<body>
 
-  <main>
+    <main>
+        <section>
+<nav>
+    <li>
+        
+    </li>
+</nav>
+        </section>
 
-    <h2>Dados enviados:</h2>
-    <ul>
-      <li><strong>Nome:</strong> <span id="nome"></span></li>
-      <li><strong>Sobrenome:</strong> <span id="sobrenome"></span></li>
-      <li><strong>E-mail:</strong> <span id="email"></span></li>
-      <li><strong>Celular:</strong> <span id="celular"></span></li>
-      <li><strong>Organização:</strong> <span id="organizacao"></span></li>
-      <li><strong>Data/Hora:</strong> <span id="registro"></span></li>
-    </ul>
-  </main>
-
-   <!-- Rodapé -->
+    </main>
+    
+ <!-- Rodapé -->
   <footer class="rodape">
     <p>&copy; 2026 Câmara de Comércio - Todos os direitos reservados</p>
     <p>Contato: contato@camara.com.br | Tel: (11) 1234-5678</p>
@@ -72,17 +82,5 @@
       document.getElementById("ultima-modificacao").textContent = formatada;
     </script>
   </footer>
-
-  <script>
-    // Captura parâmetros da URL
-    const params = new URLSearchParams(window.location.search);
-    document.getElementById("nome").textContent = params.get("nome");
-    document.getElementById("sobrenome").textContent = params.get("sobrenome");
-    document.getElementById("email").textContent = params.get("email");
-    document.getElementById("celular").textContent = params.get("celular");
-    document.getElementById("organizacao").textContent = params.get("organizacao");
-    document
-    
-  </script>
 </body>
 </html>
