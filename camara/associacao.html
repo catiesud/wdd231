@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="estilos/associaresponsivo.css">
   <link rel="icon" href="favicon.ico">
 
-  <!-- Scripts -->
+  <!-- Scripts externos -->
   <script src="scripts/camara.js" defer></script>
   <script src="scripts/weather.js" defer></script>
   <script src="scripts/principal.js" defer></script>
@@ -35,7 +35,7 @@
   <header class="cabecalho">
     <img src="imagens/logo-comercio.jpg" alt="Logo da Câmara de Comércio de São Paulo" width="200">
     <h1>Associação da Câmara de Comércio</h1>
-    <nav>
+    <nav id="navegacao">
       <ul>
         <li><a href="index.html">Início</a></li>
         <li><a href="diretorio.html">Diretório</a></li>
@@ -44,29 +44,32 @@
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
+    <button id="menu-botao" aria-expanded="false">☰ Menu</button>
   </header>
+
   <main>
     <div class="container">
       <section class="formulario">
         <h2>Formulário de Associação</h2>
         <form method="get" action="agradecimento.html">
+          <!-- Campos do formulário -->
           <label> Nome do candidato:
-            <input type="text" name="nome" title="Nome do candidato" autocomplete="given-name" required>
+            <input type="text" name="nome" autocomplete="given-name" required>
           </label><br>
           <label> Sobrenome do candidato:
-            <input type="text" name="sobrenome" title="Sobrenome do candidato" autocomplete="family-name" required>
+            <input type="text" name="sobrenome" autocomplete="family-name" required>
           </label><br>
           <label> Cargo na organização:
-            <input type="text" name="cargo" title="Cargo na organização" autocomplete="organization-title" pattern="[A-Za-zÀ-ÿ\-\\s]{7,}">
+            <input type="text" name="cargo" autocomplete="organization-title" pattern="[A-Za-zÀ-ÿ\-\\s]{7,}">
           </label><br>
           <label> Endereço de e-mail:
-            <input type="email" name="email" title="E-mail do candidato" autocomplete="email" placeholder="exemplo@dominio.com" required>
+            <input type="email" name="email" autocomplete="email" placeholder="exemplo@dominio.com" required>
           </label><br>
           <label> Número de celular:
-            <input type="tel" name="celular" title="Celular do candidato" autocomplete="tel" required>
+            <input type="tel" name="celular" autocomplete="tel" required>
           </label><br>
           <label> Nome da empresa/organização:
-            <input type="text" name="organizacao" title="Organização" autocomplete="organization" required>
+            <input type="text" name="organizacao" autocomplete="organization" required>
           </label><br>
 
           <label for="membership">Nível de Membresia:</label>
@@ -79,7 +82,7 @@
           </select>
 
           <label> Descrição da atividade/organização:
-            <textarea name="descricao" title="Descrição da atividade"></textarea>
+            <textarea name="descricao"></textarea>
           </label><br>
 
           <input type="hidden" name="registro" id="registro">
@@ -99,11 +102,11 @@
         </div>
         <div class="cartao">
           <h3>Associação Prata</h3>
-          <a href="#modal-silver">Mais informações</a>
+          <a href="#modal-prata">Mais informações</a>
         </div>
         <div class="cartao">
           <h3>Associação Ouro</h3>
-          <a href="#modal-gold">Mais informações</a>
+          <a href="#modal-ouro">Mais informações</a>
         </div>
       </aside>
     </div>
@@ -111,7 +114,7 @@
     <!-- Modais -->
     <div id="modal-np" class="modal">
       <div class="modal-conteudo">
-        <span class="fechar" onclick="fecharModal('modal-np')">&times;</span>
+        <span class="fechar" data-modal="modal-np">&times;</span>
         <h2>Benefícios NP</h2>
         <p>Sem taxa, participação em eventos comunitários.</p>
       </div>
@@ -119,7 +122,7 @@
 
     <div id="modal-bronze" class="modal">
       <div class="modal-conteudo">
-        <span class="fechar" onclick="fecharModal('modal-bronze')">&times;</span>
+        <span class="fechar" data-modal="modal-bronze">&times;</span>
         <h2>Benefícios Bronze</h2>
         <p>Eventos básicos, treinamentos introdutórios.</p>
       </div>
@@ -127,7 +130,7 @@
 
     <div id="modal-prata" class="modal">
       <div class="modal-conteudo">
-        <span class="fechar" onclick="fecharModal('modal-silver')">&times;</span>
+        <span class="fechar" data-modal="modal-prata">&times;</span>
         <h2>Benefícios Prata</h2>
         <p>Eventos especiais, descontos em atividades.</p>
       </div>
@@ -135,7 +138,7 @@
 
     <div id="modal-ouro" class="modal">
       <div class="modal-conteudo">
-        <span class="fechar" onclick="fecharModal('modal-gold')">&times;</span>
+        <span class="fechar" data-modal="modal-ouro">&times;</span>
         <h2>Benefícios Ouro</h2>
         <p>Treinamentos avançados, publicidade destacada, grandes descontos.</p>
       </div>
@@ -144,9 +147,9 @@
 
   <!-- Rodapé -->
   <footer class="rodape">
-    <p>&copy; 2026 Câmara de Comércio - Todos os direitos reservados</p>
+    <p>&copy; <span id="ano"></span> Câmara de Comércio - Todos os direitos reservados</p>
     <p>Contato: contato@camara.com.br | Tel: (11) 1234-5678</p>
-    <p>© 2026 - 🌻 Catiana Guillaume 🌻 - São Paulo, Brasil</p>
+    <p>🌻 Catiana Guillaume 🌻 - São Paulo, Brasil</p>
     <p>Última Modificação: <span id="ultima-modificacao"></span></p>
     <div class="social">
       <a href="https://www.linkedin.com/showcase/spchamber/?originalSubdomain=br">
@@ -159,11 +162,6 @@
         <img src="imagens/facebook.svg" alt="Facebook" width="50">
       </a>
     </div>
-    <script>
-      const data = new Date(document.lastModified);
-      const formatada = data.toLocaleString("pt-BR");
-      document.getElementById("ultima-modificacao").textContent = formatada;
-    </script>
   </footer>
 </body>
 </html>
