@@ -6,7 +6,7 @@
   <meta name="description" content="Associe sua empresa à Câmara de Comércio de São Paulo, para garantir seus benefícios, escolha planos NP, ouro, prata ou bronze">
   <meta name="author" content="Catiana Guillaume">
 
-  <!-- Open Graph para redes sociais -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Câmara de Comércio de São Paulo - WDD231">
   <meta property="og:description" content="Associe sua empresa à Câmara de Comércio de São Paulo, para garantir seus benefícios, escolha planos NP, ouro, prata ou bronze.">
   <meta property="og:image" content="https://catiesud.github.io/wdd231/camara/imagens/camara-comercio.png">
@@ -16,7 +16,7 @@
 
   <title>Associe-se à Câmara de Comércio de São Paulo</title>
 
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -44,7 +44,6 @@
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
-    <button id="menu-botao" aria-expanded="false">☰ Menu</button>
   </header>
 
   <main>
@@ -52,37 +51,41 @@
       <section class="formulario">
         <h2>Formulário de Associação</h2>
         <form method="get" action="agradecimento.html">
-          <!-- Campos do formulário -->
           <label> Nome do candidato:
-            <input type="text" name="nome" autocomplete="given-name" required>
+            <input type="text" name="nome" title="Nome do candidato" autocomplete="given-name" required>
           </label><br>
+
           <label> Sobrenome do candidato:
-            <input type="text" name="sobrenome" autocomplete="family-name" required>
+            <input type="text" name="sobrenome" title="Sobrenome do candidato" autocomplete="family-name" required>
           </label><br>
+
           <label> Cargo na organização:
-            <input type="text" name="cargo" autocomplete="organization-title" pattern="[A-Za-zÀ-ÿ\-\\s]{7,}">
+            <input type="text" name="cargo" title="Cargo na organização" autocomplete="organization-title" pattern="[A-Za-zÀ-ÿ\-\\s]{7,}">
           </label><br>
+
           <label> Endereço de e-mail:
-            <input type="email" name="email" autocomplete="email" placeholder="exemplo@dominio.com" required>
+            <input type="email" name="email" title="Endereço de e-mail" autocomplete="email" placeholder="exemplo@dominio.com" required>
           </label><br>
+
           <label> Número de celular:
-            <input type="tel" name="celular" autocomplete="tel" required>
+            <input type="tel" name="celular" title="Número de celular" autocomplete="tel" required>
           </label><br>
+
           <label> Nome da empresa/organização:
-            <input type="text" name="organizacao" autocomplete="organization" required>
+            <input type="text" name="organizacao" title="Nome da organização" autocomplete="organization" required>
           </label><br>
 
           <label for="membership">Nível de Membresia:</label>
-          <select id="membership" name="membership" required>
+          <select id="membership" name="membership" title="Nível de Membresia" required>
             <option value="" disabled selected>Selecione um nível</option>
             <option value="np">NP</option>
             <option value="bronze">Bronze</option>
-            <option value="silver">Prata</option>
-            <option value="gold">Ouro</option>
-          </select>
+            <option value="silver">Silver</option>
+            <option value="gold">Gold</option>
+          </select><br>
 
           <label> Descrição da atividade/organização:
-            <textarea name="descricao"></textarea>
+            <textarea name="descricao" title="Descrição da atividade/organização"></textarea>
           </label><br>
 
           <input type="hidden" name="registro" id="registro">
