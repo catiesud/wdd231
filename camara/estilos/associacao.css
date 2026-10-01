@@ -103,3 +103,36 @@ header h1 {
 .botao-enviar:hover {
   background-color: lab(21.01% 37.63 13.25);
 }
+
+
+/* Container dos confetes */
+.confetes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* não atrapalha cliques */
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* Cada confete */
+.confete {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  opacity: 0.8;
+  animation: cair 5s linear infinite;
+}
+
+/* Animação de queda */
+@keyframes cair {
+  from {
+    transform: translateY(-10vh) rotate(0deg);
+  }
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}

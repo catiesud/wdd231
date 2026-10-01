@@ -6,14 +6,6 @@
   <meta name="description" content="Associe sua empresa à Câmara de Comércio de São Paulo, para garantir seus benefícios, escolha planos NP, ouro, prata ou bronze">
   <meta name="author" content="Catiana Guillaume">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Câmara de Comércio de São Paulo - WDD231">
-  <meta property="og:description" content="Associe sua empresa à Câmara de Comércio de São Paulo, para garantir seus benefícios, escolha planos NP, ouro, prata ou bronze.">
-  <meta property="og:image" content="https://catiesud.github.io/wdd231/camara/imagens/camara-comercio.png">
-  <meta property="og:url" content="https://www.facebook.com/share/182e4hbTg9/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_BR">
-
   <title>Associe-se à Câmara de Comércio de São Paulo</title>
 
   <!-- Fonts -->
@@ -45,20 +37,50 @@
       </ul>
     </nav>
   </header>
-<body>
 
-    <main>
-        <section>
-<nav>
-    <li>
-        
-    </li>
-</nav>
-        </section>
+  <main>
+    <section>
+      <h2>Formulário de Associação</h2>
+      <form method="get" action="agradecimento.html">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
 
-    </main>
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" id="sobrenome" name="sobrenome" required>
+
+        <label for="cargo">Cargo na Organização:</label>
+        <input type="text" id="cargo" name="cargo" required>
+
+        <label for="email">Endereço de Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="celular">Celular:</label>
+        <input type="tel" id="celular" name="celular" required>
+
+        <label for="organizacao">Nome da Organização:</label>
+        <input type="text" id="organizacao" name="organizacao" required>
+
+        <label for="membresia">Nível de Membresia:</label>
+        <select id="membresia" name="membresia" required>
+          <option value="">Selecione...</option>
+          <option value="NP">NP</option>
+          <option value="Ouro">Ouro</option>
+          <option value="Prata">Prata</option>
+          <option value="Bronze">Bronze</option>
+        </select>
+
+        <label for="descricao">Descrição da Organização:</label>
+        <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+        <label for="timestamp">Timestamp:</label>
+        <input type="datetime-local" id="timestamp" name="timestamp" required>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
     
- <!-- Rodapé -->
+  <!-- Rodapé -->
   <footer class="rodape">
     <p>&copy; 2026 Câmara de Comércio - Todos os direitos reservados</p>
     <p>Contato: contato@camara.com.br | Tel: (11) 1234-5678</p>
@@ -76,11 +98,11 @@
       </a>
     </div>
 
-    <script>
-      const data = new Date(document.lastModified);
-      const formatada = data.toLocaleString("pt-BR");
-      document.getElementById("ultima-modificacao").textContent = formatada;
-    </script>
+    <!-- Scripts externos -->
+  <script src="scripts/camara.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/principal.js" defer></script>
+   
   </footer>
 </body>
 </html>
