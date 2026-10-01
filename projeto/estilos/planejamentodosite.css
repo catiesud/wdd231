@@ -1,0 +1,198 @@
+/* style.css - Projeto Pintura 360 */
+
+/* ========================= */
+/* Configurações gerais */
+/* ========================= */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Cinza claro - fundo */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================= */
+/* Cabeçalho */
+/* ========================= */
+
+
+/* Cabeçalho e rodapé para todas as páginas */
+header, footer {
+  background: linear-gradient(90deg, #4CAF50, #FFEB3B);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  color: #333;
+}
+
+header img {
+    max-width: 120px;
+    margin-top: 10px;
+}
+
+/* ========================= */
+/* Navegação */
+/* ========================= */
+nav {
+    background-color: #003366;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+h1 {
+    background-color: #FFD700;
+    color: #333;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #FFD700; /* Amarelo - cor secundária */
+}
+
+/* ========================= */
+/* Banner principal */
+/* ========================= */
+.banner {
+    background-color: #FFD700;
+    color: #004080;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.banner h2 {
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: 2em;
+}
+
+.banner button {
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.banner button:hover {
+    background-color: #003366;
+}
+
+/* ========================= */
+/* Seções de conteúdo */
+/* ========================= */
+section {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: #004080;
+    font-family: "Arial Black", Arial, sans-serif;
+}
+
+.servicos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.servico {
+    background-color: white;
+    border: 2px solid #004080;
+    border-radius: 8px;
+    width: 30%;
+    padding: 20px;
+    margin: 10px;
+}
+
+.servico h3 {
+    color: #004080;
+}
+
+.servico button {
+    background-color: #FFD700;
+    color: #004080;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.servico button:hover {
+    background-color: #e6c200;
+}
+
+/* ========================= */
+/* Depoimentos */
+/* ========================= */
+.depoimentos {
+    background-color: #f9f9fc;
+    padding: 30px;
+}
+
+.depoimento {
+    border: 1px dashed #004080;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+}
+
+/* ========================= */
+/* Rodapé */
+/* ========================= */
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ========================= */
+/* Responsividade */
+/* ========================= */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servico {
+        width: 80%;
+    }
+
+    .banner h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 0.9em;
+    }
+
+    .banner {
+        padding: 20px;
+    }
+
+    .banner button {
+        width: 100%;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
