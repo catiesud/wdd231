@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description"
+    content="Contato Informações de endereço, telefone, e-mail, mapa e formulário para dúvidas, e fazer orçamento.">
+  <meta name="author" content="Catiana Guillaume">
+  <title>Pintura 360 - Contato</title>
+  <link rel="stylesheet" href="estilos/pintura360.css">
+  <script src="scrips/pintura360.js"></script>
+  <link rel="stylesheet" href="serviço.html">
+  <link rel="stylesheet" href="contato.html">
+  <link rel="stylesheet" href="index.html">
+<link rel="stylesheet" href="avaliacao.html">
+
+ <!--favicon-->
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+  <header>
+    <img src="imagens/logo-slogan-pintura.jpg" alt="Logo Pintura 360" width="150">
+    <h1>Pintura 360</h1>
+    <nav>
+      <a href="index.html">Pagina Inicial</a>
+      <a href="contato.html">Fale com Nosco</a>
+      <a href="servicos.html">serviços</a>
+
+    </nav>
+  </header>
+
+  <main>
+
+  <h1>Pintura 360</h1>    
+  <p> Rua Riachuelo <br>
+      São Paulo, SP<br>
+      <a href="tel:+5511961747566">+55 11 96174-7566</a><br>
+      <a href="mailto:info@pintura360.com">info@pintura360.com</a>
+    </p>
+
+    <!-- Contêiner para mapa + formulário -->
+    <div class="contato-container">
+
+
+      <!-- Mapa -->
+      <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300"
+        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
+
+    <!-- Formulário -->
+     <section class="formulario">
+      <h2>Fale Conosco</h2>
+
+      <!-- Formulário único com method e action corretos -->
+      <form method="get" action="avaliacao.html">
+
+        <!-- Nome -->
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <!-- Email -->
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Select com placeholder -->
+        <label for="servico">Escolha o serviço:</label>
+        <select id="servico" name="servico" required>
+          <option value="" disabled selected>Selecione uma opção</option>
+          <option value="interna">Pintura interna</option>
+          <option value="externa">Pintura externa</option>
+          <option value="textura">Textura decorativa</option>
+        </select>
+
+        <!-- Radios 5 opções -->
+        <p>Qual o propósito da mensagem?</p>
+        <input type="radio" id="orcamento" name="proposito" value="orcamento" required>
+        <label for="orcamento">Solicitar orçamento</label><br>
+
+        <input type="radio" id="duvida" name="proposito" value="duvida">
+        <label for="duvida">Tirar dúvidas</label><br>
+
+        <input type="radio" id="elogio" name="proposito" value="elogio">
+        <label for="elogio">Enviar elogio</label><br>
+
+        <input type="radio" id="reclamacao" name="proposito" value="reclamacao">
+        <label for="reclamacao">Fazer reclamação</label><br>
+
+        <input type="radio" id="outro" name="proposito" value="outro">
+        <label for="outro">Outro</label><br>
+
+        <!-- Input de data -->
+        <label for="data">Data preferida para contato:</label>
+        <input type="date" id="data" name="data">
+
+        <!-- Checkboxes (mínimo 4) -->
+        <p>Quais serviços você tem interesse?</p>
+        <input type="checkbox" id="chk1" name="servicos" value="interna">
+        <label for="chk1">Pintura Residencial</label><br>
+
+        <input type="checkbox" id="chk2" name="servicos" value="externa">
+        <label for="chk2">Pintura Comercial</label><br>
+
+        <input type="checkbox" id="chk3" name="servicos" value="textura">
+        <label for="chk3">Textura Decorativa</label><br>
+
+        <input type="checkbox" id="chk4" name="servicos" value="fachada">
+        <label for="chk4">Pintura de Fachada</label><br>
+
+        <!-- Textarea -->
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <label for="newsletter">Quero receber a newsletter mensal</label><br>
+
+        <!-- Botão de envio -->
+        <input type="submit" value="Enviar">
+
+      </form>
+    </section>
+  
+
+  </main>
+
+  <footer>
+    <nav>
+        <a href="tel:+5511961747566">+55 11 96174-7566</a><br>
+      <a href="mailto:info@pintura360.com">info@pintura360.com</a>
+      </nav>
+
+    <p>&copy; 2026 Pintura 360 🫟 Catiana Guillaume 🫟- Todos os direitos reservados</p>
+     
+    <nav class="redes-sociais">
+      <a href="https://facebook.com" target="_blank"><img src="imagens/facebook-rafting.svg"
+          alt="Facebook" width="50"></a>
+      <a href="https://instagram.com" target="_blank"><img src="imagens/instagram-rafting.svg"
+          alt="Instagram" width="50"></a>
+      <a href="https://linkedin.com" target="_blank"><img src="imagens/linkedin-rafting.svg"
+          alt="LinkedIn" width="50"></a>
+    </nav>
+  </footer>
+</body>
+</html>
