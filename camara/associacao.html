@@ -50,6 +50,7 @@
     <div class="container">
       <section class="formulario">
         <h2>Formulário de Associação</h2>
+        <!-- Layout responsivo seguindo princípios de proximidade, alinhamento e repetição -->
         <form method="get" action="agradecimento.html">
           <label> Nome do candidato:
             <input type="text" name="nome" title="Nome do candidato" autocomplete="given-name" required>
@@ -88,6 +89,7 @@
             <textarea name="descricao" title="Descrição da atividade/organização"></textarea>
           </label><br>
 
+          <!-- Campo oculto para registrar data/hora do carregamento -->
           <input type="hidden" name="registro" id="registro">
           <button type="submit" class="botao-enviar">Enviar inscrição</button>
         </form>
@@ -95,6 +97,7 @@
 
       <aside class="cartoes">
         <h2>Níveis de Associação</h2>
+        <!-- Cada cartão abre um modal HTML com benefícios -->
         <div class="cartao">
           <h3>Associação NP</h3>
           <a href="#modal-np">Mais informações</a>
@@ -166,5 +169,7 @@
       </a>
     </div>
   </footer>
+
+  
 </body>
 </html>
