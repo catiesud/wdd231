@@ -22,13 +22,17 @@ header, footer {
   border-bottom: 4px solid #f4b942;
 }
 
-header img {
-  max-width: 150px;
+header img {  
+  margin-right: 10px;
+  width: 50px;
+   height: auto;
 }
 
 header h1 {
   margin: 0.5rem 0;
 }
+
+
 
 nav ul {
   list-style: none;

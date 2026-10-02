@@ -43,8 +43,8 @@ fetch("dados/membros.json")
   })
   .catch(err => console.error("Erro ao carregar membros:", err));
 
-// Menu toggle
 document.addEventListener("DOMContentLoaded", () => {
+  // Menu toggle
   const menuBtn = document.getElementById("menu-btn");
   if (menuBtn) {
     menuBtn.addEventListener("click", () => {
@@ -54,10 +54,35 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-});
 
-// Modais (fechar)
-document.addEventListener("DOMContentLoaded", () => {
+  // Última modificação no rodapé
+  const data = new Date(document.lastModified);
+  const formatada = data.toLocaleString("pt-BR");
+  const ultima = document.getElementById("ultima-modificacao");
+  if (ultima) {
+    ultima.textContent = formatada;
+  }
+
+  // Registro de data/hora do carregamento do formulário
+  const registro = document.getElementById("registro");
+  if (registro) {
+    registro.value = new Date().toISOString();
+  }
+
+  // Abrir modal ao clicar em "Mais informações"
+  const links = document.querySelectorAll(".cartao a");
+  links.forEach(link => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault(); // evita rolagem para o id
+      const modalId = link.getAttribute("href").substring(1); // remove o #
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = "block";
+      }
+    });
+  });
+
+  // Fechar modal ao clicar no botão ×
   const fecharBtns = document.querySelectorAll(".fechar");
   fecharBtns.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -68,23 +93,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-});
 
-// Última modificação no rodapé
-document.addEventListener("DOMContentLoaded", () => {
-  const data = new Date(document.lastModified);
-  const formatada = data.toLocaleString("pt-BR");
-  const ultima = document.getElementById("ultima-modificacao");
-  if (ultima) {
-    ultima.textContent = formatada;
-  }
+  // Fechar modal clicando fora do conteúdo
+  window.addEventListener("click", (event) => {
+    if (event.target.classList.contains("modal")) {
+      event.target.style.display = "none";
+    }
+  });
 });
-
-// Registro de data/hora do carregamento do formulário
-document.addEventListener("DOMContentLoaded", () => {
-  const registro = document.getElementById("registro");
-  if (registro) {
-    registro.value = new Date().toISOString();
-  }
-});
-
