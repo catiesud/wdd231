@@ -14,8 +14,8 @@ body {
 
 /* Cabeçalho e rodapé */
 header, footer {
-  background-color: #006d77; /* azul-esverdeado mais escuro para contraste AA */
-  color: #ffffff;
+  background-color: #006d77; /* azul-esverdeado */
+  color: #ffffff;            /* texto branco para contraste */
   padding: 1rem;
   text-align: center;
   border-bottom: 4px solid #f4b942;
@@ -55,7 +55,7 @@ header h1 {
   }
 }
 
-/* Cartões com animação */
+/* Cartões */
 .cartao {
   border: 1px solid #ccc;
   padding: 15px;
@@ -64,6 +64,7 @@ header h1 {
   background: #fff;
   opacity: 0;
   animation: aparecer 2s forwards;
+  color: #222; /* contraste garantido */
 }
 
 .cartao:nth-child(1) { animation-delay: 0.5s; }
@@ -93,20 +94,20 @@ header h1 {
   width: 90%;
   max-width: 500px;
   border-radius: 8px;
-  color: #222; /* contraste melhorado */
+  color: #000000; /* texto preto sobre fundo branco */
 }
 
 .fechar {
   float: right;
   cursor: pointer;
   font-weight: bold;
-  color: #006d77; /* cor consistente e visível */
+  color: #006d77; /* cor visível e consistente */
 }
 
 /* Botão */
 .botao-enviar {
-  background-color: #2e7d32; /* verde escuro com contraste AA */
-  color: #ffffff;
+  background-color: #2e7d32; /* verde escuro */
+  color: #ffffff;            /* texto branco */
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -115,10 +116,10 @@ header h1 {
 }
 
 .botao-enviar:hover {
-  background-color: #1b5e20; /* verde ainda mais escuro no hover */
+  background-color: #1b5e20; /* verde mais escuro no hover */
 }
 
-/* Responsividade extra para telas pequenas */
+/* Responsividade extra */
 @media (max-width: 480px) {
   header h1 {
     font-size: 1.2rem;
@@ -132,14 +133,14 @@ header h1 {
   }
 }
 
-/* Confetes obrigatórios na página de agradecimento */
+/* Confetes */
 .confetes {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* não atrapalha cliques */
+  pointer-events: none;
   overflow: hidden;
   z-index: 9999;
 }
@@ -153,7 +154,6 @@ header h1 {
   animation: cair 5s linear infinite;
 }
 
-/* Animação de queda */
 @keyframes cair {
   from {
     transform: translateY(-10vh) rotate(0deg);
