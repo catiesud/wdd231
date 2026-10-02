@@ -8,6 +8,158 @@
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
+  background-color: #605f5f;
+  color: #333;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  background-color: #006d77;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 4px solid #f4b942;
+}
+
+.cabecalho img {
+  max-width: 120px;
+  height: auto;
+}
+
+.cabecalho h1 {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+#navegacao ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+#navegacao a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#navegacao a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  background: url('imagens/hero.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Layout principal */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.formulario, .cartoes {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Cartões */
+.cartao {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background: #fff;
+  color: #222;
+  opacity: 0;
+  animation: aparecer 2s forwards;
+}
+
+.cartao:nth-child(1) { animation-delay: 0.5s; }
+.cartao:nth-child(2) { animation-delay: 1s; }
+.cartao:nth-child(3) { animation-delay: 1.5s; }
+.cartao:nth-child(4) { animation-delay: 2s; }
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-conteudo {
+  background: #ffffff;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 8px;
+  color: #000;
+}
+
+.fechar {
+  float: right;
+  cursor: pointer;
+  font-weight: bold;
+  color: #006d77;
+}
+
+/* Botão */
+.botao-enviar {
+  background-color: #2e7d32;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botao-enviar:hover {
+  background-color: #1b5e20;
+}
+
+/* Rodapé */
+.rodape {
+  background-color: #006d77;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.rodape .social {
+  margin-top: 10px;
+}
+
+.rodape .social a img {
+  margin: 0 8px;
+}
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
 }

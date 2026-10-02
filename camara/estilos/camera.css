@@ -21,12 +21,12 @@ header, footer {
   text-align: center;
   border-bottom: 4px solid #f4b942;
 }
-
-header img {  
-  margin-right: 10px;
-  width: 50px;
-   height: auto;
+.cabecalho img {
+  max-width: 120px;
+  height: auto;
 }
+
+
 
 header h1 {
   margin: 0.5rem 0;
