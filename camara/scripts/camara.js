@@ -5,21 +5,23 @@ const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${
 
 fetch(url)
   .then(response => response.json())
-  .then(data => {
-    document.getElementById("temp").textContent = data.list[0].main.temp.toFixed(1);
-    document.getElementById("desc").textContent = data.list[0].weather[0].description;
+  .then(dados => {
+    // Temperatura atual
+    document.getElementById("temp").textContent = dados.list[0].main.temp.toFixed(1);
+    document.getElementById("desc").textContent = dados.list[0].weather[0].description;
 
+    // Previsão para os próximos 3 dias
     const forecastDiv = document.getElementById("forecast");
     forecastDiv.innerHTML = "";
     for (let i = 1; i <= 3; i++) {
-      const day = data.list[i * 8]; // previsão a cada 24h
+      const day = dados.list[i * 8]; // previsão a cada 24h
       forecastDiv.innerHTML += `<p>Dia ${i}: ${day.main.temp.toFixed(1)}°C</p>`;
     }
   })
-  .catch(err => console.error(err));
+  .catch(err => console.error("Erro na API de clima:", err));
 
-// Featured Members
-fetch("data/membros.json")
+// Featured Members (pasta 'dados')
+fetch("dados/membros.json")
   .then(response => response.json())
   .then(membros => {
     const featured = membros.filter(m => m.level === "Ouro" || m.level === "Prata");
@@ -38,7 +40,8 @@ fetch("data/membros.json")
         </div>
       `;
     });
-  });
+  })
+  .catch(err => console.error("Erro ao carregar membros:", err));
 
 // Menu toggle
 document.addEventListener("DOMContentLoaded", () => {
@@ -76,3 +79,12 @@ document.addEventListener("DOMContentLoaded", () => {
     ultima.textContent = formatada;
   }
 });
+
+// Registro de data/hora do carregamento do formulário
+document.addEventListener("DOMContentLoaded", () => {
+  const registro = document.getElementById("registro");
+  if (registro) {
+    registro.value = new Date().toISOString();
+  }
+});
+

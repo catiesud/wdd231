@@ -1,0 +1,38 @@
+[
+  {
+    "nome": "Prefeitura de São Paulo",
+    "email": "contato@prefeitura.sp.gov.br",
+    "site": "https://www.prefeitura.sp.gov.br",
+    "imagem": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Brasao_Prefeitura_SP.png"
+  },
+  {
+    "nome": "Companhia Paulista de Trens Metropolitanos (CPTM)",
+    "email": "atendimento@cptm.sp.gov.br",
+    "site": "https://www.cptm.sp.gov.br",
+    "imagem": "https://upload.wikimedia.org/wikipedia/commons/2/2a/CPTM_logo.png"
+  },
+  {
+    "nome": "Metrô de São Paulo",
+    "email": "ouvidoria@metro.sp.gov.br",
+    "site": "https://www.metro.sp.gov.br",
+    "imagem": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Logo_Metro_SP.png"
+  },
+  {
+    "nome": "Sabesp - Companhia de Saneamento Básico do Estado de São Paulo",
+    "email": "faleconosco@sabesp.com.br",
+    "site": "https://www.sabesp.com.br",
+    "imagem": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Sabesp_logo.png"
+  },
+  {
+    "nome": "USP - Universidade de São Paulo",
+    "email": "contato@usp.br",
+    "site": "https://www.usp.br",
+    "imagem": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_USP.png"
+  },
+  {
+    "nome": "EMTU - Empresa Metropolitana de Transportes Urbanos",
+    "email": "atendimento@emtu.sp.gov.br",
+    "site": "https://www.emtu.sp.gov.br",
+    "imagem": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Logo_EMTU.png"
+  }
+]
