@@ -4,17 +4,12 @@
 /* Configurações gerais */
 /* ========================= */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9; /* Cinza claro - fundo */
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFFFFF; /* Branco */
     color: #333;
     margin: 0;
     padding: 0;
 }
-
-/* ========================= */
-/* Cabeçalho */
-/* ========================= */
-
 
 /* Cabeçalho e rodapé para todas as páginas */
 header, footer {
@@ -26,54 +21,62 @@ header, footer {
   color: #333;
 }
 
+header {
+  border-bottom: 3px solid #388E3C;
+}
+
+footer {
+  border-top: 3px solid #388E3C;
+  text-align: center;
+}
+
+
+
 header img {
     max-width: 120px;
     margin-top: 10px;
 }
 
+
 /* ========================= */
 /* Navegação */
 /* ========================= */
 nav {
-    background-color: #003366;
+    background-color: #0A2A66; /* Azul escuro */
     display: flex;
     justify-content: center;
     gap: 20px;
     padding: 10px;
 }
 
-h1 {
-    background-color: #FFD700;
-    color: #333;
-}
 nav a {
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #FFD700; /* Amarelo - cor secundária */
+    color: #FFD700; /* Amarelo */
 }
 
 /* ========================= */
 /* Banner principal */
 /* ========================= */
 .banner {
-    background-color: #FFD700;
-    color: #004080;
+    background-color: #FFD700; /* Amarelo */
+    color: #0A2A66; /* Azul escuro */
     text-align: center;
     padding: 40px 20px;
 }
 
 .banner h2 {
-    font-family: "Arial Black", Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2em;
 }
 
 .banner button {
-    background-color: #004080;
-    color: white;
+    background-color: #2ECC71; /* Verde */
+    color: #FFFFFF;
     border: none;
     padding: 10px 20px;
     font-size: 1em;
@@ -82,7 +85,7 @@ nav a:hover {
 }
 
 .banner button:hover {
-    background-color: #003366;
+    background-color: #27ae60; /* Verde mais escuro */
 }
 
 /* ========================= */
@@ -94,8 +97,8 @@ section {
 }
 
 section h2 {
-    color: #004080;
-    font-family: "Arial Black", Arial, sans-serif;
+    color: #0A2A66; /* Azul escuro */
+    font-family: 'Montserrat', sans-serif;
 }
 
 .servicos {
@@ -106,8 +109,8 @@ section h2 {
 }
 
 .servico {
-    background-color: white;
-    border: 2px solid #004080;
+    background-color: #FFFFFF;
+    border: 2px solid #0A2A66;
     border-radius: 8px;
     width: 30%;
     padding: 20px;
@@ -115,12 +118,12 @@ section h2 {
 }
 
 .servico h3 {
-    color: #004080;
+    color: #0A2A66;
 }
 
 .servico button {
-    background-color: #FFD700;
-    color: #004080;
+    background-color: #FFD700; /* Amarelo */
+    color: #0A2A66;
     border: none;
     padding: 8px 15px;
     cursor: pointer;
@@ -135,26 +138,18 @@ section h2 {
 /* Depoimentos */
 /* ========================= */
 .depoimentos {
-    background-color: #f9f9fc;
+    background-color: #f9f9f9; /* Cinza */
     padding: 30px;
 }
 
 .depoimento {
-    border: 1px dashed #004080;
+    border: 1px dashed #0A2A66;
     border-radius: 8px;
     margin: 10px;
     padding: 15px;
 }
 
-/* ========================= */
-/* Rodapé */
-/* ========================= */
-footer {
-    background-color: #004080;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
+
 
 /* ========================= */
 /* Responsividade */
