@@ -1,12 +1,14 @@
+// Importa os locais do arquivo locais.mjs
 import { locais } from "../data/locais.mjs";
 
+// Seleciona o container dos cards
 const container = document.getElementById("locais");
 
+// Cria os cards dinamicamente
 locais.forEach((item, index) => {
   const card = document.createElement("div");
   card.classList.add("card");
   card.style.gridArea = `c${index+1}`;
-
 
   card.innerHTML = `
     <h2>${item.nome}</h2>
@@ -39,4 +41,5 @@ if (!ultimaVisita) {
   }
 }
 
+// Atualiza a data da última visita
 localStorage.setItem("ultimaVisita", agora);
