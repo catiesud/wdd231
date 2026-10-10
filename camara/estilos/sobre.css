@@ -8,7 +8,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  background-color: #605f5f; /* fundo cinza */
+  background-color: #f0ebeb; /* fundo cinza */
   color: #333;
 }
 
@@ -138,3 +138,18 @@ main {
 .rodape .social a img {
   margin: 0 8px;
 }
+
+/* Container da grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* uma coluna no mobile */
+  }
+}
+

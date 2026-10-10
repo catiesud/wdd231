@@ -1,7 +1,8 @@
 
 
 
-export const locais = [
+export const locais = 
+[
     {
         "nome": "Avenida Paulista",
         "descricao": "Principal avenida da cidade, repleta de centros culturais, museus e vida urbana intensa.",
