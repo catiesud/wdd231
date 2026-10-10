@@ -1,0 +1,140 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #605f5f; /* fundo cinza */
+  color: #333;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  background-color: #006d77; /* azul-esverdeado */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 4px solid #f4b942; /* dourado */
+}
+
+.cabecalho img {
+  max-width: 120px;
+  height: auto;
+}
+
+.cabecalho h1 {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+#navegacao ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+#navegacao a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#navegacao a:hover {
+  text-decoration: underline;
+}
+
+/* Layout principal */
+main {
+  padding: 20px;
+}
+
+/* Cartões da galeria */
+.card {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  color: #222;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #006d77; /* azul-esverdeado */
+}
+
+.card figure {
+  margin: 0;
+  text-align: center;
+}
+
+.card img {
+  border-radius: 6px;
+  max-width: 100%;
+  height: auto;
+}
+
+.card address {
+  font-style: normal;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.card p {
+  margin: 0.5rem 0;
+}
+
+.card button {
+  background-color: #2e7d32; /* verde escuro */
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.card button:hover {
+  background-color: #1b5e20; /* verde mais escuro */
+}
+
+/* Mensagem do usuário */
+#mensagem-usuario {
+  background-color: #f4b942; /* dourado */
+  border: 2px solid #006d77;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #006d77;
+  text-align: center;
+}
+
+/* Rodapé */
+.rodape {
+  background-color: #006d77;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-top: 4px solid #f4b942;
+}
+
+.rodape .social {
+  margin-top: 10px;
+}
+
+.rodape .social a img {
+  margin: 0 8px;
+}

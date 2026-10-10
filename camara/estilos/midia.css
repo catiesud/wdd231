@@ -1,0 +1,87 @@
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Telas pequenas: 320px a 640px */
+@media (min-width: 320px) and (max-width: 640px) {
+  .grid-container {
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4"
+      "card5"
+      "card6"
+      "card7"
+      "card8";
+  }
+}
+
+/* Telas médias: 641px a 1024px */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .grid-container {
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+}
+
+/* Telas grandes: 1025px ou mais */
+@media (min-width: 1025px) {
+  .grid-container {
+    grid-template-areas:
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8";
+  }
+}
+
+/* Estilo dos cartões */
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card figure {
+  margin: 0;
+}
+
+.card img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.card address {
+  font-style: normal;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.card p {
+  margin: 0.5rem 0;
+}
+
+.card button {
+  background-color: teal;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.card button:hover {
+  background-color: #006666;
+}

@@ -3,95 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Associe sua empresa à Câmara de Comércio de São Paulo, para garantir seus benefícios, escolha planos NP, ouro, prata ou bronze">
+  <meta name="description" content="Conheça os principais pontos de interesse de São Paulo promovidos pela Câmara de Comércio.">
   <meta name="author" content="Catiana Guillaume">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Câmara de Comércio de São Paulo - WDD231">
+  <meta property="og:description" content="Descubra os locais mais importantes de São Paulo e associe-se à Câmara de Comércio.">
+  <meta property="og:image" content="https://catiesud.github.io/wdd231/camara/imagens/camara-comercio.png">
+  <meta property="og:url" content="https://www.facebook.com/share/182e4hbTg9/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
 
   <title>Sobre a Câmara de Comércio de São Paulo</title>
 
-  <!-- Open Graph para redes sociais -->
-  <meta property="og:title" content="Sobre a Câmara de Comércio de São Paulo e seus associados" />
-<meta property="og:description" content="Conheça a Câmara de Comércio de São Paulo, sua missão, benefícios e oportunidades para empresas associadas." />  <meta property="og:image" content="https://catiesud.github.io/wdd231/camara/imagens/camara-comercio.png">
-  <meta property="og:url" content="https://catiesud.github.io/wdd231/camara/agradecimento.html">  <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_BR">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="estilos/associacao.css">
   <link rel="stylesheet" href="estilos/normalize.css">
+  <link rel="stylesheet" href="estilos/sobre.css">
+
+  <link rel="stylesheet" href="estilos/midia.css">
   <link rel="icon" href="favicon.ico">
 
 
-  
-  <!-- Scripts externos -->
-  <script src="scripts/camara.js" defer></script>
-  <script src="scripts/weather.js" defer></script>
-  <script src="scripts/principal.js" defer></script>
+  <!-- Scripts -->
+    <script type="module" src="scripts/sobre.js"></script>
+
 </head>
 <body>
+  <!-- Cabeçalho padrão -->
   <header class="cabecalho">
     <img src="imagens/logo-comercio.jpg" alt="Logo da Câmara de Comércio de São Paulo" width="200">
-    <h1>Associação da Câmara de Comércio</h1>
+    <h1>Câmara de Comércio de São Paulo</h1>
     <nav id="navegacao">
       <ul>
         <li><a href="index.html">Início</a></li>
         <li><a href="diretorio.html">Diretório</a></li>
         <li><a href="eventos.html">Eventos</a></li>
         <li><a href="associacao.html">Associe-se</a></li>
-        <li><a href="sobre.html">Contato</a></li>
+        <li><a href="sobre.html">sobre</a></li>
+        <li><a href="contato.html">contato</a></li>
+
       </ul>
     </nav>
   </header>
 
+  <!-- Conteúdo principal -->
   <main>
-    <section>
-      <h2>Formulário de Associação</h2>
-      <form method="get" action="agradecimento.html">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+    <!-- Mensagem personalizada de visita -->
+    <section id="mensagem-visita"></section>
 
-        <label for="sobrenome">Sobrenome:</label>
-        <input type="text" id="sobrenome" name="sobrenome" required>
+    <!-- Container dos cartões -->
 
-        <label for="cargo">Cargo na Organização:</label>
-        <input type="text" id="cargo" name="cargo" required>
+    <section class="grid-container" id="locais">
 
-        <label for="email">Endereço de Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="celular">Celular:</label>
-        <input type="tel" id="celular" name="celular" required>
-
-        <label for="organizacao">Nome da Organização:</label>
-        <input type="text" id="organizacao" name="organizacao" required>
-
-        <label for="membresia">Nível de Membresia:</label>
-        <select id="membresia" name="membresia" required>
-          <option value="">Selecione...</option>
-          <option value="NP">NP</option>
-          <option value="Ouro">Ouro</option>
-          <option value="Prata">Prata</option>
-          <option value="Bronze">Bronze</option>
-        </select>
-
-        <label for="descricao">Descrição da Organização:</label>
-        <textarea id="descricao" name="descricao" rows="4" required></textarea>
-
-        <label for="timestamp">Timestamp:</label>
-        <input type="datetime-local" id="timestamp" name="timestamp" required>
-
-        <button type="submit">Enviar</button>
-      </form>
+      <!-- Os 8 cartões serão inseridos dinamicamente via sobre.js -->
     </section>
+
   </main>
-    
-  <!-- Rodapé -->
+
+  <!-- Rodapé padrão -->
   <footer class="rodape">
-    <p>&copy; 2026 Câmara de Comércio - Todos os direitos reservados</p>
+    <p>&copy; <span id="ano"></span> Câmara de Comércio - Todos os direitos reservados</p>
     <p>Contato: contato@camara.com.br | Tel: (11) 1234-5678</p>
-    <p>© 2026 - 🌻 Catiana Guillaume 🌻 - São Paulo, Brasil</p>
+    <p>🌻 Catiana Guillaume 🌻 - São Paulo, Brasil</p>
     <p>Última Modificação: <span id="ultima-modificacao"></span></p>
     <div class="social">
       <a href="https://www.linkedin.com/showcase/spchamber/?originalSubdomain=br">
@@ -104,9 +82,6 @@
         <img src="imagens/facebook.svg" alt="Facebook" width="50">
       </a>
     </div>
-
- 
-   
   </footer>
 </body>
 </html>
