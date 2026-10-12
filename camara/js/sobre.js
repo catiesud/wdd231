@@ -1,45 +1,45 @@
 
-import { locais } from "../data/locais.mjs";
 
-console.log("Locais carregados:", locais);
+      import { locais } from "../dados/locais.mjs";
 
-
-const container = document.getElementById("locais");
-
-locais.forEach((item, index) => {
-  const card = document.createElement("div");
-  card.classList.add("card");
-  card.style.gridArea = `card${index+1}`;
-
-  card.innerHTML = `
-    <h2>${item.nome}</h2>
-    <figure>
-      <img src="${item.link_foto}" alt="${item.nome}" width="300" height="200">
-    </figure>
-    <address>${item.endereco}</address>
-    <p>${item.descricao}</p>
-    <p><strong>Custo:</strong> ${item.custo}</p>
-    <button>Saiba mais</button>
-  `;
-  container.appendChild(card);
+document.addEventListener("DOMContentLoaded", () => {
+  exibirLocais(locais);
+  carregarClima();
 });
 
-// Mensagem de visita com localStorage
-const mensagem = document.getElementById("mensagem-visita");
-const ultimaVisita = localStorage.getItem("ultimaVisita");
-const agora = Date.now();
+function exibirLocais(lista) {
+  const container = document.getElementById("locais");
+  container.innerHTML = "";
 
-if (!ultimaVisita) {
-  mensagem.textContent = "Boas-vindas! Entre em contato conosco caso tenha alguma dúvida.";
-} else {
-  const diffDias = Math.floor((agora - ultimaVisita) / (1000 * 60 * 60 * 24));
-  if (diffDias < 1) {
-    mensagem.textContent = "Já voltou? Que legal!";
-  } else if (diffDias === 1) {
-    mensagem.textContent = `Seu último acesso foi há 1 dia.`;
-  } else {
-    mensagem.textContent = `Seu último acesso foi há ${diffDias} dias.`;
-  }
+  lista.forEach(local => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+      <img 
+        src="${local.link_foto}" 
+        alt="Foto de ${local.nome}" 
+        loading="lazy" 
+        width="300" height="200">
+      <h3>${local.nome}</h3>
+      <p>${local.descricao}</p>
+      <p><strong>Endereço:</strong> ${local.endereco}</p>
+      <p><strong>Custo:</strong> ${local.custo}</p>
+    `;
+
+    container.appendChild(card);
+  });
 }
 
-localStorage.setItem("ultimaVisita", agora);
+// Clima
+function carregarClima() {
+  const url = "https://api.openweathermap.org/data/2.5/forecast?q=São Paulo&appid=SUA_CHAVE&units=metric&lang=pt_br";
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("temp").textContent = data.list[0].main.temp.toFixed(1);
+      document.getElementById("desc").textContent = data.list[0].weather[0].description;
+    })
+    .catch(error => console.error("Erro ao carregar clima:", error));
+}
