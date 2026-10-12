@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de Cards Dinâmicos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- Mensagem personalizada de visita -->
+    <section id="mensagem-visita"></section>
+
+    <!-- Container dos cartões -->
+    <section class="grid-container" id="locais">
+      <!-- Os 8 cartões serão inseridos dinamicamente via sobre.js -->
+    </section>
+  </main>
+
+  <script>
+    const container = document.getElementById("locais");
+
+    const locais = [
+      { titulo: "Praia", descricao: "Um lugar relaxante", imagem: "https://picsum.photos/300/200?random=1" },
+      { titulo: "Montanha", descricao: "Ideal para trilhas", imagem: "https://picsum.photos/300/200?random=2" },
+      { titulo: "Cidade", descricao: "Agitação urbana", imagem: "https://picsum.photos/300/200?random=3" },
+      { titulo: "Campo", descricao: "Natureza e tranquilidade", imagem: "https://picsum.photos/300/200?random=4" },
+      { titulo: "Deserto", descricao: "Paisagens únicas", imagem: "https://picsum.photos/300/200?random=5" },
+      { titulo: "Floresta", descricao: "Verde exuberante", imagem: "https://picsum.photos/300/200?random=6" },
+      { titulo: "Lago", descricao: "Águas calmas", imagem: "https://picsum.photos/300/200?random=7" },
+      { titulo: "Ilha", descricao: "Refúgio paradisíaco", imagem: "https://picsum.photos/300/200?random=8" }
+    ];
+
+    locais.forEach(local => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+
+      card.innerHTML = `
+        <img src="${local.imagem}" alt="${local.titulo}">
+        <h3>${local.titulo}</h3>
+        <p>${local.descricao}</p>
+      `;
+
+      container.appendChild(card);
+    });
+
+    // Mensagem personalizada de visita
+    const mensagem = document.getElementById("mensagem-visita");
+    mensagem.innerHTML = "<h2>Bem-vindo(a)! Confira nossos locais incríveis:</h2>";
+  </script>
+</body>
+</html>
