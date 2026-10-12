@@ -111,7 +111,7 @@ main {
 }
 
 /* Mensagem do usuário */
-#mensagem-usuario {
+#mensagem-visita {
   background-color: #f4b942; /* dourado */
   border: 2px solid #006d77;
   padding: 1rem;
@@ -142,14 +142,59 @@ main {
 /* Container da grid */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
 }
 
-@media (max-width: 768px) {
+/* Telas pequenas */
+@media (max-width: 640px) {
   .grid-container {
-    grid-template-columns: 1fr; /* uma coluna no mobile */
+    grid-template-areas:
+      "c1"
+      "c2"
+      "c3"
+      "c4"
+      "c5"
+      "c6"
+      "c7"
+      "c8";
+    grid-template-columns: 1fr;
   }
+}
+
+/* Telas médias */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .grid-container {
+    grid-template-areas:
+      "c1 c2"
+      "c3 c4"
+      "c5 c6"
+      "c7 c8";
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Telas grandes */
+@media (min-width: 1025px) {
+  .grid-container {
+    grid-template-areas:
+      "c1 c2 c3 c4"
+      "c5 c6 c7 c8";
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Hover nas imagens apenas em telas médias e grandes */
+@media (min-width: 641px) {
+  .card img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+}
+
+.card {
+  border: 1px solid #1b5e20;
+  padding: 10px;
+  margin: 10px;
 }
 

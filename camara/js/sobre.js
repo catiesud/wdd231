@@ -1,4 +1,8 @@
+
 import { locais } from "../data/locais.mjs";
+
+console.log("Locais carregados:", locais);
+
 
 const container = document.getElementById("locais");
 

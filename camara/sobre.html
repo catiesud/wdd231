@@ -85,6 +85,12 @@
         <img src="imagens/facebook.svg" alt="Facebook" width="50">
       </a>
     </div>
+
+    <script>
+      const data = new Date(document.lastModified);
+      const formatada = data.toLocaleString("pt-BR");
+      document.getElementById("ultima-modificacao").textContent = formatada;
+    </script>
   </footer>
 </body>
 </html>
