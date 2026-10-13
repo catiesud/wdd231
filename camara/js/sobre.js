@@ -31,6 +31,7 @@ function exibirLocais(lista) {
   });
 }
 
+
 // Clima
 function carregarClima() {
   const url = "https://api.openweathermap.org/data/2.5/forecast?q=São Paulo&appid=SUA_CHAVE&units=metric&lang=pt_br";
@@ -41,5 +42,20 @@ function carregarClima() {
       document.getElementById("temp").textContent = data.list[0].main.temp.toFixed(1);
       document.getElementById("desc").textContent = data.list[0].weather[0].description;
     })
-    .catch(error => console.error("Erro ao carregar clima:", error));
-}
+    .catch(error => console.error("Erro ao carregar clima:", error)); 
+
+    card.innerHTML = `
+  <h2>${item.nome}</h2>
+  <figure>
+    <img 
+      src="${item.link_foto}" 
+      alt="${item.nome}" 
+      width="300" 
+      height="200" 
+      loading="lazy">
+  </figure>
+  <address>${item.endereco}</address>
+  <p>${item.descricao}</p>
+  <p><strong>Custo:</strong> ${item.custo}</p>
+  <button>Saiba mais</button>
+  ';
