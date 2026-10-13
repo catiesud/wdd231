@@ -2,162 +2,120 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="description"
-    content="Contato Informações de endereço, telefone, e-mail, mapa e formulário para dúvidas, e fazer orçamento.">
+  <meta name="description" content="Entre em contato com a Pintura 360: endereço, telefone, e-mail, mapa e formulário para dúvidas ou solicitação de orçamento.">
   <meta name="author" content="Catiana Guillaume">
+  <title>Pintura 360 - Contato</title>
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pintura 360 - Contato">
+  <meta property="og:description" content="Fale com a equipe da Pintura 360. Solicite orçamentos ou tire dúvidas sobre nossos serviços de pintura.">
+  <meta property="og:image" content="https://catiesud.github.io/wdd231/projeto/imagens/logo-slogan-pintura.jpg">
+  <meta property="og:url" content="https://catiesud.github.io/wdd231/projeto/contato.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+
+  <!-- CSS -->
   
-<!-- Open Graph para redes sociais -->
- <meta property="og:title" content="Página Inicial - Catiana Guillaume">
- <meta property="og:description" content="Conheça mais sobre Catiana Guillaume, estudante de Engenharia Civil e Desenvolvimento de Software, apaixonada por tecnologia e comércio exterior.">
- <meta property="og:image" content="https://seusite.com/imagens/catianaperfildinamica.jpeg">
- <meta property="og:url" content="https://www.facebook.com/share/182e4hbTg9/">
- </head> meta property="og:type" content="website">
-<meta property="og:locale" content="pt_BR">
+  <link rel="stylesheet" href="estilos/pintura360.css">
 
-
-  <link rel="stylesheet" href="estilos/comercio.css">
-  <link rel="stylesheet" href="estilos/comercioresponsivo.css">
+  <!-- Scripts -->
   <script src="scripts/principal.js" defer></script>
   <script src="scripts/curso.js" defer></script>
-  <link rel="icon" href="imagens/favicon.ico.ico">
+  <script src="scripts/pintura360.js" defer></script>
 
-  <link rel="icon" href="favicon.ico">
+  <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="estilos/pintura360.css">
-  <script src="scrips/pintura360.js"></script>
-  <link rel="stylesheet" href="serviço.html">
-  <link rel="stylesheet" href="contato.html">
-  <link rel="stylesheet" href="index.html">
-<link rel="stylesheet" href="avaliacao.html">
-
- <!--favicon-->
-    <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
   <header>
     <img src="imagens/logo-slogan-pintura.jpg" alt="Logo Pintura 360" width="150">
     <h1>Pintura 360</h1>
-    <nav>
-      <a href="index.html">Pagina Inicial</a>
-      <a href="contato.html">Fale com Nosco</a>
-      <a href="servicos.html">serviços</a>
-
+    <nav aria-label="Menu principal">
+      <a href="index.html">Página Inicial</a>
+      <a href="contato.html">Fale Conosco</a>
+      <a href="servicos.html">Serviços</a>
     </nav>
   </header>
 
   <main>
-
-  <h1>Pintura 360</h1>    
-  <p> Rua Riachuelo <br>
+    <h2>Contato</h2>
+    <p>
+      Rua Riachuelo<br>
       São Paulo, SP<br>
       <a href="tel:+5511961747566">+55 11 96174-7566</a><br>
       <a href="mailto:info@pintura360.com">info@pintura360.com</a>
     </p>
 
-    <!-- Contêiner para mapa + formulário -->
     <div class="contato-container">
-
-
       <!-- Mapa -->
       <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300"
-        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        style="border:0;" allowfullscreen="" loading="lazy" title="Mapa da localização da Pintura 360"></iframe>
 
-
-
-    <!-- Formulário -->
-     <section class="formulario">
-      <h2>Fale Conosco</h2>
-
-      <!-- Formulário único com method e action corretos -->
+      <!-- Formulário -->
+      <section class="formulario">
+        <h2>Fale Conosco</h2>
         <form method="get" action="agradecimento.html">
-          
-        <!-- Nome -->
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
 
-        <!-- Email -->
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
 
-        <!-- Select com placeholder -->
-        <label for="servico">Escolha o serviço:</label>
-        <select id="servico" name="servico" required>
-          <option value="" disabled selected>Selecione uma opção</option>
-          <option value="interna">Pintura interna</option>
-          <option value="externa">Pintura externa</option>
-          <option value="textura">Textura decorativa</option>
-        </select>
+          <label for="servico">Escolha o serviço:</label>
+          <select id="servico" name="servico" required>
+            <option value="" disabled selected>Selecione uma opção</option>
+            <option value="interna">Pintura interna</option>
+            <option value="externa">Pintura externa</option>
+            <option value="textura">Textura decorativa</option>
+          </select>
 
-        <!-- Radios 5 opções -->
-        <p>Qual o propósito da mensagem?</p>
-        <input type="radio" id="orcamento" name="proposito" value="orcamento" required>
-        <label for="orcamento">Solicitar orçamento</label><br>
+          <fieldset>
+            <legend>Qual o propósito da mensagem?</legend>
+            <label><input type="radio" name="proposito" value="orcamento" required> Solicitar orçamento</label><br>
+            <label><input type="radio" name="proposito" value="duvida"> Tirar dúvidas</label><br>
+            <label><input type="radio" name="proposito" value="elogio"> Enviar elogio</label><br>
+            <label><input type="radio" name="proposito" value="reclamacao"> Fazer reclamação</label><br>
+            <label><input type="radio" name="proposito" value="outro"> Outro</label>
+          </fieldset>
 
-        <input type="radio" id="duvida" name="proposito" value="duvida">
-        <label for="duvida">Tirar dúvidas</label><br>
+          <label for="data">Data preferida para contato:</label>
+          <input type="date" id="data" name="data">
 
-        <input type="radio" id="elogio" name="proposito" value="elogio">
-        <label for="elogio">Enviar elogio</label><br>
+          <fieldset>
+            <legend>Quais serviços você tem interesse?</legend>
+            <label><input type="checkbox" name="servicos" value="interna"> Pintura Residencial</label><br>
+            <label><input type="checkbox" name="servicos" value="externa"> Pintura Comercial</label><br>
+            <label><input type="checkbox" name="servicos" value="textura"> Textura Decorativa</label><br>
+            <label><input type="checkbox" name="servicos" value="fachada"> Pintura de Fachada</label>
+          </fieldset>
 
-        <input type="radio" id="reclamacao" name="proposito" value="reclamacao">
-        <label for="reclamacao">Fazer reclamação</label><br>
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" required></textarea>
 
-        <input type="radio" id="outro" name="proposito" value="outro">
-        <label for="outro">Outro</label><br>
+          <label><input type="checkbox" id="newsletter" name="newsletter"> Quero receber a newsletter mensal</label><br>
 
-        <!-- Input de data -->
-        <label for="data">Data preferida para contato:</label>
-        <input type="date" id="data" name="data">
-
-        <!-- Checkboxes (mínimo 4) -->
-        <p>Quais serviços você tem interesse?</p>
-        <input type="checkbox" id="chk1" name="servicos" value="interna">
-        <label for="chk1">Pintura Residencial</label><br>
-
-        <input type="checkbox" id="chk2" name="servicos" value="externa">
-        <label for="chk2">Pintura Comercial</label><br>
-
-        <input type="checkbox" id="chk3" name="servicos" value="textura">
-        <label for="chk3">Textura Decorativa</label><br>
-
-        <input type="checkbox" id="chk4" name="servicos" value="fachada">
-        <label for="chk4">Pintura de Fachada</label><br>
-
-        <!-- Textarea -->
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" required></textarea>
-
-        <input type="checkbox" id="newsletter" name="newsletter">
-        <label for="newsletter">Quero receber a newsletter mensal</label><br>
-
-        <!-- Botão de envio -->
-        <input type="submit" value="Enviar">
-
-      </form>
-    </section>
-  
-
+          <input type="submit" value="Enviar">
+        </form>
+      </section>
+    </div>
   </main>
 
   <footer>
-    <nav>
-        <a href="tel:+5511961747566">+55 11 96174-7566</a><br>
+    <nav aria-label="Contato">
+      <a href="tel:+5511961747566">+55 11 96174-7566</a><br>
       <a href="mailto:info@pintura360.com">info@pintura360.com</a>
-      </nav>
-
-    <p>&copy; 2026 Pintura 360 🫟 Catiana Guillaume 🫟- Todos os direitos reservados</p>
-     
-    <nav class="redes-sociais">
-      <a href="https://facebook.com" target="_blank"><img src="imagens/facebook-rafting.svg"
-          alt="Facebook" width="50"></a>
-      <a href="https://instagram.com" target="_blank"><img src="imagens/instagram-rafting.svg"
-          alt="Instagram" width="50"></a>
-      <a href="https://linkedin.com" target="_blank"><img src="imagens/linkedin-rafting.svg"
-          alt="LinkedIn" width="50"></a>
+    </nav>
+    <p>&copy; 2026 Pintura 360 🫟 Catiana Guillaume 🫟 - Todos os direitos reservados</p>
+    <nav class="redes-sociais" aria-label="Redes sociais">
+      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><img src="imagens/facebook-rafting.svg" alt="Facebook da Pintura 360" width="50"></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><img src="imagens/instagram-rafting.svg" alt="Instagram da Pintura 360" width="50"></a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><img src="imagens/linkedin-rafting.svg" alt="LinkedIn da Pintura 360" width="50"></a>
     </nav>
   </footer>
 </body>

@@ -19,7 +19,17 @@ body.dark {
   color: #eee;
 }
 
-/* Cabeçalho e rodapé para todas as páginas */
+body.dark header,
+body.dark footer,
+body.dark .hero,
+body.dark .grid-servicos article,
+body.dark .tabela-servicos table {
+  background: #333;
+  color: #eee;
+  border-color: #555;
+}
+
+/* Cabeçalho e rodapé */
 header, footer {
   background: linear-gradient(90deg, #4CAF50, #FFEB3B);
   display: flex;
@@ -38,7 +48,7 @@ footer {
   text-align: center;
 }
 
-header h1, .tabela-serviços h2 {
+header h1, .tabela-servicos h2 {
   color: #fff;
   text-shadow: 1px 1px 2px #333;
 }
@@ -53,6 +63,7 @@ header nav a, footer .redes-sociais a {
 
 header nav a:hover {
   color: #1B5E20;
+  text-decoration: underline;
 }
 
 footer .redes-sociais a:hover {
@@ -93,14 +104,14 @@ main ul li:hover {
 }
 
 /* Grid de serviços */
-.grid-serviços {
+.grid-servicos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   margin-bottom: 40px;
 }
 
-.grid-serviços article {
+.grid-servicos article {
   background: #fff;
   border: 2px solid #4CAF50;
   border-radius: 10px;
@@ -109,24 +120,24 @@ main ul li:hover {
   transition: 0.3s;
 }
 
-.grid-serviços article:hover {
+.grid-servicos article:hover {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.grid-serviços img {
+.grid-servicos img {
   max-width: 100%;
   border-radius: 8px;
   margin-bottom: 10px;
 }
 
 /* Tabela de serviços */
-.tabela-serviços {
+.tabela-servicos {
   padding: 20px;
   background: linear-gradient(135deg, #4CAF50, #FFEB3B);
   border-radius: 10px;
 }
 
-.tabela-serviços table {
+.tabela-servicos table {
   width: 100%;
   border-collapse: collapse;
   background: rgba(255, 255, 255, 0.95);
@@ -134,24 +145,24 @@ main ul li:hover {
   overflow: hidden;
 }
 
-.tabela-serviços th {
+.tabela-servicos th {
   background: linear-gradient(90deg, #4CAF50, #FFEB3B);
   color: #333;
   padding: 12px;
   text-transform: uppercase;
 }
 
-.tabela-serviços td {
+.tabela-servicos td {
   padding: 10px;
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
 
-.tabela-serviços tr:nth-child(even) {
+.tabela-servicos tr:nth-child(even) {
   background: #F1F8E9;
 }
 
-.tabela-serviços tr:hover {
+.tabela-servicos tr:hover {
   background: #FFF9C4;
   cursor: pointer;
 }
@@ -214,7 +225,6 @@ main ul li:hover {
   transition: 0.3s;
 }
 
-
 .atendimento figure:hover {
   transform: scale(1.05);
 }
@@ -243,6 +253,12 @@ main ul li:hover {
   flex: 1;
   min-height: 300px;
   border: 2px solid #4CAF50;
+}
+
+.contato-container .formulario {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
 }
 
 /* Avaliações */
@@ -302,6 +318,10 @@ main ul li:hover {
   body {
     font-size: 14px;
     padding: 10px;
+  }
+
+  .contato-container {
+    flex-direction: column;
   }
 
   #lista-servicos {

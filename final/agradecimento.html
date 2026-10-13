@@ -1,8 +1,13 @@
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <title>Obrigado!</title>
+      <link rel="icon" href="favicon.ico">
+
   <style>
     body {
       display: flex;
@@ -13,6 +18,7 @@
       font-family: Arial, sans-serif;
       color: white;
       text-align: center;
+      overflow: hidden; /* evita barra de rolagem com confete */
     }
 
     h1 {
@@ -41,5 +47,39 @@
     <h1>🎉 Obrigado pelo contato!</h1>
     <p>Recebemos sua mensagem e entraremos em contato em breve.</p>
   </div>
+
+  <!-- Importa a biblioteca de confete -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <script>
+    // Dispara confete ao carregar a página
+    confetti({
+      particleCount: 150,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+
+    // Efeito extra: confete contínuo por alguns segundos
+    let duration = 10 * 1000; // 10 segundos
+    let end = Date.now() + duration;
+
+    (function frame() {
+      confetti({
+        particleCount: 5,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 }
+      });
+      confetti({
+        particleCount: 5,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 }
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    }());
+  </script>
 </body>
 </html>

@@ -2,43 +2,41 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="description"
-    content="Pintura 360 oferece uma experiência no acabamento do seu ambiente, seja residencial, comercial, particular ou público.">
+  <meta name="description" content="Pintura 360 oferece serviços de pintura residencial, comercial e industrial com qualidade e dedicação.">
   <meta name="author" content="Catiana Guillaume">
   <title>Pintura 360 - Serviços</title>
 
-  
-<!-- Open Graph para redes sociais -->
-<meta property="og:title" content="Página Inicial - Catiana Guillaume">
-<meta property="og:description" content="Conheça mais sobre Catiana Guillaume, estudante de Engenharia Civil e Desenvolvimento de Software, apaixonada por tecnologia e comércio exterior.">
-<meta property="og:image" content="https://seusite.com/imagens/catianaperfildinamica.jpeg">
-<meta property="og:url" content="https://www.facebook.com/share/182e4hbTg9/">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="pt_BR">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pintura 360 - Serviços de Pintura">
+  <meta property="og:description" content="Conheça os serviços da Pintura 360: pintura residencial, comercial e industrial com qualidade e confiança.">
+  <meta property="og:image" content="https://catiesud.github.io/wdd231/projeto/imagens/pintura-residencial.jpg">
+  <meta property="og:url" content="https://catiesud.github.io/wdd231/projeto/servicos.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
 
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="estilos/comercio.css">
   <link rel="stylesheet" href="estilos/comercioresponsivo.css">
+  <link rel="stylesheet" href="estilos/pintura360.css">
+
+  <!-- Scripts -->
   <script src="scripts/principal.js" defer></script>
   <script src="scripts/curso.js" defer></script>
-  <link rel="icon" href="imagens/favicon.ico.ico">
+  <script src="scripts/pintura360.js" defer></script>
 
-  <link rel="icon" href="favicon.ico">
+  <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="estilos/pintura360.css">
-  <script src="scripts/pintura360.js" defer></script>
-
-  <!--favicon-->
-  <link rel="icon" href="favicon.ico">
 </head>
 <body>
   <header>
     <img src="imagens/logo-slogan-pintura.jpg" alt="Logo da empresa Pintura 360" width="150">
     <h1>Pintura 360</h1>
-    <nav>
+    <nav aria-label="Menu principal">
       <ul>
         <li><a href="index.html">Início</a></li>
         <li><a href="contato.html">Fale Conosco</a></li>
@@ -55,34 +53,32 @@
       <li>Pintura Industrial</li>
     </ul>
 
-    <!-- serviços -->
     <section class="servicos">
       <h2>Detalhes dos Serviços</h2>
       <div class="grid-servicos">
         <article>
-          <img src="imagens/pintura-residencial.jpg" alt="Pessoa pintando parede de uma casa">
+          <img src="imagens/pintura-residencial.jpg" alt="Profissional realizando pintura residencial em parede interna">
           <h3>Pintura Residencial</h3>
-          <p>Pintura para casas e apartamentos.</p>
+          <p>Pintura para casas e apartamentos, com acabamento de alta qualidade.</p>
         </article>
         <article>
-          <img src="imagens/pintura-comercial.jpg" alt="Equipe realizando pintura em espaço comercial">
+          <img src="imagens/pintura-comercial.jpg" alt="Equipe realizando pintura em espaço comercial moderno">
           <h3>Pintura Comercial</h3>
-          <p>Pintura para estabelecimentos e escritórios.</p>
+          <p>Pintura para estabelecimentos e escritórios, garantindo ambientes renovados.</p>
         </article>
       </div>
     </section>
 
-    <!-- Tabela de serviços -->
     <section class="tabela-servicos">
       <h2>Todas as Pinturas Disponíveis</h2>
       <table>
         <caption>Lista de tipos de pintura e condições</caption>
         <thead>
           <tr>
-            <th>Pintura</th>
-            <th>Interna</th>
-            <th>Externa</th>
-            <th>Preço</th>
+            <th scope="col">Pintura</th>
+            <th scope="col">Interna</th>
+            <th scope="col">Externa</th>
+            <th scope="col">Preço</th>
           </tr>
         </thead>
         <tbody>
@@ -110,22 +106,22 @@
   </main>
 
   <footer>
-    <nav>
+    <nav aria-label="Contato">
       <ul>
         <li><a href="tel:+5511961747566">+55 11 96174-7566</a></li>
         <li><a href="mailto:info@pintura360.com">info@pintura360.com</a></li>
       </ul>
     </nav>
-     <p>&copy; 2026 Pintura 360 🫟 Catiana Guillaume 🫟 - Todos os direitos reservados</p>
-    <nav class="redes-sociais">
-      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-        <img src="imagens/facebook-rafting.svg" alt="Facebook" width="50">
+    <p>&copy; 2026 Pintura 360 🫟 Catiana Guillaume 🫟 - Todos os direitos reservados</p>
+    <nav class="redes-sociais" aria-label="Redes sociais">
+      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">
+        <img src="imagens/facebook-rafting.svg" alt="Facebook da Pintura 360" width="50">
       </a>
-      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-        <img src="imagens/instagram-rafting.svg" alt="Instagram" width="50">
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
+        <img src="imagens/instagram-rafting.svg" alt="Instagram da Pintura 360" width="50">
       </a>
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-        <img src="imagens/linkedin-rafting.svg" alt="LinkedIn" width="50">
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+        <img src="imagens/linkedin-rafting.svg" alt="LinkedIn da Pintura 360" width="50">
       </a>
     </nav>
   </footer>

@@ -4,7 +4,7 @@
     "nome": "Prefeitura de São Paulo",
     "email": "contato@prefeitura.sp.gov.br",
     "site": "https://www.prefeitura.sp.gov.br",
-    "imagem": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Brasao_Prefeitura_SP.png"
+    "imagem": "imagens/prefeitura-sp.webp"
   },
   {
     "nome": "Companhia Paulista de Trens Metropolitanos (CPTM)",
@@ -28,7 +28,7 @@
     "nome": "USP - Universidade de São Paulo",
     "email": "contato@usp.br",
     "site": "https://www.usp.br",
-    "imagem": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_USP.png"
+    "imagem": "imagens/usp-butanta.webp"
   },
   {
     "nome": "EMTU - Empresa Metropolitana de Transportes Urbanos",
