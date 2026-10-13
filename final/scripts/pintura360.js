@@ -60,22 +60,3 @@ if (ultimoContato) {
   console.log("Último contato:", ultimoContato.nome, ultimoContato.email, ultimoContato.mensagem);
 }
 
-// --- Carregar clientes do JSON ---
-fetch("dados/clientes.json")
-  .then(response => response.json())
-  .then(clientes => {
-    const container = document.getElementById("lista-clientes");
-    if (container) {
-      clientes.forEach(cliente => {
-        const card = document.createElement("article");
-        card.innerHTML = `
-          <img src="${cliente.imagem}" alt="Logo ${cliente.nome}">
-          <h3>${cliente.nome}</h3>
-          <p>Email: <a href="mailto:${cliente.email}">${cliente.email}</a></p>
-          <p>Site: <a href="${cliente.site}" target="_blank">${cliente.site}</a></p>
-        `;
-        container.appendChild(card);
-      });
-    }
-  })
-  .catch(error => console.error("Erro ao carregar clientes:", error));
