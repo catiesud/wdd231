@@ -10,19 +10,19 @@
     "nome": "Companhia Paulista de Trens Metropolitanos (CPTM)",
     "email": "atendimento@cptm.sp.gov.br",
     "site": "https://www.cptm.sp.gov.br",
-    "imagem": "https://upload.wikimedia.org/wikipedia/commons/2/2a/CPTM_logo.png"
+    "imagem": "imagens/emtu-sp.webp"
   },
   {
     "nome": "Metrô de São Paulo",
     "email": "ouvidoria@metro.sp.gov.br",
     "site": "https://www.metro.sp.gov.br",
-    "imagem": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Logo_Metro_SP.png"
+    "imagem": "imagens/metro-sp.webp"
   },
   {
     "nome": "Sabesp - Companhia de Saneamento Básico do Estado de São Paulo",
     "email": "faleconosco@sabesp.com.br",
     "site": "https://www.sabesp.com.br",
-    "imagem": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Sabesp_logo.png"
+    "imagem": "imagens/Sabesp-sp.webp"
   },
   {
     "nome": "USP - Universidade de São Paulo",
@@ -34,6 +34,6 @@
     "nome": "EMTU - Empresa Metropolitana de Transportes Urbanos",
     "email": "atendimento@emtu.sp.gov.br",
     "site": "https://www.emtu.sp.gov.br",
-    "imagem": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Logo_EMTU.png"
+    "imagem": "imagens/emtu-sp.webp"
   }
 ]

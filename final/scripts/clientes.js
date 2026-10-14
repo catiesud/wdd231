@@ -5,6 +5,7 @@ async function carregarClientes() {
   try {
     const response = await fetch("dados/clientes.json");
     const clientes = await response.json();
+    console.log(clientes);
 
     const container = document.getElementById("lista-clientes");
     if (container) {

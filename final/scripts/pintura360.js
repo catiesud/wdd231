@@ -1,5 +1,4 @@
 
-
 // --- Alternar tema ---
 const botaoTema = document.getElementById("tema");
 if (botaoTema) {
