@@ -59,3 +59,27 @@ if (ultimoContato) {
   console.log("Último contato:", ultimoContato.nome, ultimoContato.email, ultimoContato.mensagem);
 }
 
+function mostrarUltimaAtualizacao() {
+  const agora = new Date();
+  
+  // Formata a data e hora em estilo brasileiro
+  const opcoes = {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit"
+  };
+
+  const formatado = agora.toLocaleString("pt-BR", opcoes);
+
+  // Insere no rodapé
+  const rodape = document.getElementById("ultima-atualizacao");
+  if (rodape) {
+    rodape.textContent = `Última atualização: ${formatado}`;
+  }
+}
+
+// Executa ao carregar a página
+mostrarUltimaAtualizacao();

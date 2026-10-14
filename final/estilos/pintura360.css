@@ -345,3 +345,23 @@ main ul li:hover {
     width: 100%;
   }
 }
+
+.btn-contato {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF; /* azul */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-contato:hover {
+  background-color: #0056b3; /* azul mais escuro no hover */
+}
+
+.logo-cliente {
+  width: 300px;
+  height: 200px;
+  object-fit: cover; /* mantém proporção e corta excesso */
+}

@@ -20,3 +20,6 @@ async function carregarClientes() {
 }
 
 carregarClientes();
+
+document.getElementById("titulo").innerText = "Novo título";
+document.querySelector(".card").classList.add("ativo");
