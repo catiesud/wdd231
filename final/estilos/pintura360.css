@@ -295,4 +295,36 @@ main ul li:hover {
   transition: 0.2s ease;
 }
 
-.avaliacao:hover
+
+/* Botão hambúrguer */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Só aparece em telas pequenas */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  header nav {
+    display: none;
+    flex-direction: column;
+    background: #f4f4f4;
+    padding: 1rem;
+  }
+
+  header nav.aberto {
+    display: flex;
+  }
+}
+
+/* Wayfinding: link ativo */
+header nav a.ativo {
+  color: #b71c1c; /* vermelho escuro para contraste */
+  border-bottom: 2px solid #b71c1c;
+}
