@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 /* Reset */
 * {
   margin: 0;
@@ -327,4 +334,59 @@ main ul li:hover {
 header nav a.ativo {
   color: #b71c1c; /* vermelho escuro para contraste */
   border-bottom: 2px solid #b71c1c;
+}
+
+
+.modal {
+  display: none; /* escondido por padrão */
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6); /* overlay escuro */
+}
+
+.modal-conteudo {
+  background: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.modal-conteudo h2 {
+  color: #2E7D32;
+  margin-bottom: 15px;
+}
+
+.modal-conteudo p {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.modal-conteudo .fechar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+#btnContato {
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#btnContato:hover {
+  background: #388E3C;
 }
