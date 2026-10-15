@@ -13,6 +13,12 @@ async function carregarClientes() {
         const card = criarCardCliente(cliente);
         container.appendChild(card);
       });
+
+      // só roda depois que os cards existem
+      const primeiroCard = container.querySelector(".card");
+      if (primeiroCard) {
+        primeiroCard.classList.add("ativo");
+      }
     }
   } catch (error) {
     console.error("Erro ao carregar clientes:", error);
@@ -21,5 +27,20 @@ async function carregarClientes() {
 
 carregarClientes();
 
-document.getElementById("titulo").innerText = "Novo título";
-document.querySelector(".card").classList.add("ativo");
+// Atualiza o título dinamicamente
+const titulo = document.getElementById("titulo");
+if (titulo) {
+  if (window.location.pathname.includes("index.html")) {
+    titulo.innerText = "Pintura 360 - Bem-vindo!";
+  } else if (window.location.pathname.includes("sobre.html")) {
+    titulo.innerText = "Pintura 360 - Nossa História";
+  } else if (window.location.pathname.includes("contato.html")) {
+    titulo.innerText = "Pintura 360 - Fale Conosco";
+  } else if (window.location.pathname.includes("servicos.html")) {
+    titulo.innerText = "Pintura 360 - Serviços";
+  } else if (window.location.pathname.includes("clientes.html")) {
+    titulo.innerText = "Pintura 360 - Nossos Clientes";
+  }
+}
+
+
