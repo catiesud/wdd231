@@ -83,3 +83,34 @@ function mostrarUltimaAtualizacao() {
 
 // Executa ao carregar a página
 mostrarUltimaAtualizacao();
+
+
+// Modal
+const modal = document.getElementById("impactoModal");
+const fechar = document.querySelector(".fechar");
+const btnContato = document.getElementById("btnContato");
+
+// Exibir modal automaticamente após 2 segundos
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    modal.style.display = "block";
+  }, 2000);
+});
+
+// Fechar modal ao clicar no X
+fechar.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+// Fechar modal ao clicar fora
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+// Botão leva para página de contato
+btnContato.addEventListener("click", () => {
+  window.location.href = "contato.html";
+});
+
