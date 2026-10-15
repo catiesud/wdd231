@@ -1,10 +1,12 @@
+    /* resposta integrado a  mensagem de sucesso */
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <title>Respostas do Formulário</title>
 
-  <meta name="description" content="O formulario da Pintura 360 transforma que ambientes com qualidade e dedicação.">
+  <meta name="description" content="O formulário da Pintura 360 transforma ambientes com qualidade e dedicação.">
   <meta name="author" content="Catiana Guillaume">
   <meta name="keywords" content="pintura residencial, pintura comercial, empresa de pintura, pintura em São Paulo, reforma, pintura de casas, pintura de apartamentos">
 
@@ -16,20 +18,90 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
 
-  <link rel="stylesheet" href="estilos/formulario.css">
-    <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="estilos/pintura360.css">
+  <link rel="icon" href="favicon.ico">
 
+  <style>
+    .sucesso {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 25px;
+      background: #e6ffed;
+      border: 2px solid #28a745;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
 
+    .sucesso h1 {
+      color: #28a745;
+      margin-bottom: 10px;
+    }
+
+    .sucesso p {
+      font-size: 1.2em;
+      color: #333;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn-voltar {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #28a745;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .btn-voltar:hover {
+      background: #218838;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Dados enviados</h1>
+<header>
+  <img src="imagens/logo-slogan-pintura.jpg" alt="Logo Pintura 360" width="150">
+  <h1>Pintura 360</h1>
+  <nav aria-label="Menu principal">
+    <a href="index.html">Página Inicial</a>
+    <a href="contato.html">Fale Conosco</a>
+    <a href="servicos.html">Serviços</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Dados recebidos</h1>
   <p id="resultado"></p>
 
-  <script>
-    // Captura os parâmetros da URL
-    const params = new URLSearchParams(window.location.search);
+  <div class="sucesso">
+    <h1>🎉 Obrigado pelo contato!</h1>
+    <p>Recebemos seu formulário e entraremos em contato em breve.</p>
+    <a href="index.html" class="btn-voltar">Voltar à página inicial</a>
+  </div>
 
-    // Monta a exibição
+  <!-- Confete -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <script>
+    confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } });
+    let duration = 10 * 1000;
+    let end = Date.now() + duration;
+    (function frame() {
+      confetti({ particleCount: 5, angle: 60, spread: 55, origin: { x: 0 } });
+      confetti({ particleCount: 5, angle: 120, spread: 55, origin: { x: 1 } });
+      if (Date.now() < end) requestAnimationFrame(frame);
+    }());
+  </script>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
     const nome = params.get("nome");
     const email = params.get("email");
     const mensagem = params.get("mensagem");
@@ -40,5 +112,20 @@
       <strong>Mensagem:</strong> ${mensagem}
     `;
   </script>
+</main>
+
+<footer>
+  <nav aria-label="Contato">
+    <a href="tel:+5511961747566">+55 11 96174-7566</a><br>
+    <a href="mailto:info@pintura360.com">info@pintura360.com</a>
+    <p id="ultima-atualizacao"></p>
+  </nav>
+  <p>&copy; 2026 Pintura 360 🫟 Catiana Guillaume 🫟 - Todos os direitos reservados</p>
+  <nav class="redes-sociais" aria-label="Redes sociais">
+    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><img src="imagens/facebook-rafting.svg" alt="Facebook da Pintura 360" width="50"></a>
+    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><img src="imagens/instagram-rafting.svg" alt="Instagram da Pintura 360" width="50"></a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><img src="imagens/linkedin-rafting.svg" alt="LinkedIn da Pintura 360" width="50"></a>
+  </nav>
+</footer>
 </body>
 </html>
