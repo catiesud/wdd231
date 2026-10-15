@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Respostas do Formulário</title>
+
+  <meta name="description" content="O formulario da Pintura 360 transforma que ambientes com qualidade e dedicação.">
+  <meta name="author" content="Catiana Guillaume">
+  <meta name="keywords" content="pintura residencial, pintura comercial, empresa de pintura, pintura em São Paulo, reforma, pintura de casas, pintura de apartamentos">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pintura 360 - Projeto Final WDD231">
+  <meta property="og:description" content="Página inicial do projeto final da disciplina WDD231 - Pintura 360.">
+  <meta property="og:image" content="https://catiesud.github.io/wdd231/projeto/imagens/logo-slogan-pintura.jpg">
+  <meta property="og:url" content="https://catiesud.github.io/wdd231/projeto/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="stylesheet" href="estilos/formulario.css">
+    <link rel="icon" href="favicon.ico">
+
+
+</head>
+<body>
+  <h1>Dados enviados</h1>
+  <p id="resultado"></p>
+
+  <script>
+    // Captura os parâmetros da URL
+    const params = new URLSearchParams(window.location.search);
+
+    // Monta a exibição
+    const nome = params.get("nome");
+    const email = params.get("email");
+    const mensagem = params.get("mensagem");
+
+    document.getElementById("resultado").innerHTML = `
+      <strong>Nome:</strong> ${nome} <br>
+      <strong>Email:</strong> ${email} <br>
+      <strong>Mensagem:</strong> ${mensagem}
+    `;
+  </script>
+</body>
+</html>
