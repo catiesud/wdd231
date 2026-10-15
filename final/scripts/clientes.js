@@ -31,7 +31,7 @@ carregarClientes();
 const titulo = document.getElementById("titulo");
 if (titulo) {
   if (window.location.pathname.includes("index.html")) {
-    titulo.innerText = "Pintura 360 - Bem-vindo!";
+    titulo.innerText = "Pintura 360 ";
   } else if (window.location.pathname.includes("sobre.html")) {
     titulo.innerText = "Pintura 360 - Nossa História";
   } else if (window.location.pathname.includes("contato.html")) {
