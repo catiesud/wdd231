@@ -365,3 +365,35 @@ main ul li:hover {
   height: 200px;
   object-fit: cover; /* mantém proporção e corta excesso */
 }
+
+
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  header nav {
+    display: none;
+    flex-direction: column;
+    background: #f4f4f4;
+    padding: 1rem;
+  }
+  header nav.aberto {
+    display: flex;
+  }
+}
+
+
+header nav a.ativo {
+  color: #d35400;
+  border-bottom: 2px solid #d35400;
+}
+
