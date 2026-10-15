@@ -1,44 +1,74 @@
-/* formulario.css */
+
+/* Estilo geral */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  padding: 20px;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
+  padding: 40px;
+  margin: 0;
 }
 
-form {
-  max-width: 400px;
-  margin: auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+/* Container do formulário rápido */
+.formulario-rapido {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
+/* Título e descrição */
+.formulario-rapido h2 {
+  color: #0077cc;
+  margin-bottom: 10px;
+  font-size: 1.6em;
 }
 
-input, textarea {
+.formulario-rapido p {
+  margin-bottom: 20px;
+  color: #333; /* contraste melhor */
+  font-style: italic;
+}
+
+/* Campos de entrada */
+.formulario-rapido input,
+.formulario-rapido textarea {
   width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  margin-top: 15px;
   padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Destaque ao focar */
+.formulario-rapido input:focus,
+.formulario-rapido textarea:focus {
+  border-color: #0077cc;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 119, 204, 0.5);
+}
+
+/* Botão */
+.formulario-rapido button {
+  margin-top: 15px;
+  padding: 12px;
   width: 100%;
-  background-color: #0077cc;
+  background: linear-gradient(135deg, #0077cc, #00aaff);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.3s;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 
-button:hover {
-  background-color: #005fa3;
+/* Hover do botão */
+.formulario-rapido button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #005fa3, #0088cc);
 }
