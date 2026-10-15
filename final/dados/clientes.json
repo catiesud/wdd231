@@ -1,4 +1,3 @@
-
 [
   {
     "nome": "Prefeitura de São Paulo",
@@ -10,7 +9,7 @@
     "nome": "Companhia Paulista de Trens Metropolitanos (CPTM)",
     "email": "atendimento@cptm.sp.gov.br",
     "site": "https://www.cptm.sp.gov.br",
-    "imagem": "imagens/emtu-sp.webp"
+    "imagem": "imagens/cptm-sp.webp"
   },
   {
     "nome": "Metrô de São Paulo",
@@ -22,29 +21,26 @@
     "nome": "Sabesp - Companhia de Saneamento Básico do Estado de São Paulo",
     "email": "faleconosco@sabesp.com.br",
     "site": "https://www.sabesp.com.br",
-    "imagem": "imagens/Sabesp-sp.webp"
+    "imagem": "imagens/sabesp-sp.webp"
   },
   {
-        "nome": "Parque Ibirapuera",
-        "descricao": "Um dos maiores parques urbanos do Brasil, ideal para caminhadas, piqueniques e atividades culturais.",
-        "endereco": "Av. Pedro Álvares Cabral - Vila Mariana, São Paulo - SP, Brasil",
-        "custo": "Entrada gratuita; exposições podem ter custo",
-        "link_foto": "imagens/parque-ibirapuera.webp"
-    },
-    {
-        "nome": "Museu de Arte de São Paulo (MASP)",
-        "descricao": "Famoso por sua arquitetura suspensa e acervo de arte internacional e brasileira.",
-        "endereco": "Av. Paulista, 1578 - Bela Vista, São Paulo - SP, Brasil",
-        "custo": "Ingresso em torno de R$ 50; meia entrada disponível",
-        "link_foto": "imagens/trianon-masp.webp"
-    },
-     {
-        "nome": "Estádio do Pacaembu e Museu do Futebol",
-        "descricao": "Espaço dedicado à história do futebol brasileiro, localizado em um estádio icônico.",
-        "endereco": "Praça Charles Miller - Pacaembu, São Paulo - SP, Brasil",
-        "custo": "Ingresso em torno de R$ 20; meia entrada disponível",
-        "link_foto": "imagens/pacaembu.webp"
-    },
+    "nome": "Parque Ibirapuera",
+    "email": "contato@ibira.br",
+    "site": "https://www.ibira.br",
+    "imagem": "imagens/parque-ibirapuera.webp"
+  },
+  {
+    "nome": "Museu de Arte de São Paulo (MASP)",
+    "email": "contato@masp.br",
+    "site": "https://www.masp.br",
+    "imagem": "imagens/trianon-masp.webp"
+  },
+  {
+    "nome": "Estádio do Pacaembu e Museu do Futebol",
+    "email": "contato@pacaembu.br",
+    "site": "https://www.pacaembu.br",
+    "imagem": "imagens/estadio-pacaembu.webp"
+  },
   {
     "nome": "USP - Universidade de São Paulo",
     "email": "contato@usp.br",
@@ -57,47 +53,40 @@
     "site": "https://www.emtu.sp.gov.br",
     "imagem": "imagens/emtu-sp.webp"
   },
-  
-    {
-        "nome": "Cury Construtora",
-        "descricao": "Empresa focada em empreendimentos residenciais acessíveis e modernos.",
-        "endereco": "Av. Paulista, 1106 - Bela Vista, São Paulo - SP, Brasil",
-        "custo": "Valores variam conforme empreendimento",
-        "link_foto": "imagens/cury.webp"
-    },
-    {
-        "nome": "Tenda Construtora",
-        "descricao": "Especializada em habitação popular com projetos de grande escala.",
-        "endereco": "Av. das Nações Unidas, 12551 - Santo Amaro, São Paulo - SP, Brasil",
-        "custo": "Valores variam conforme empreendimento",
-        "link_foto": "imagens/tenda.webp"
-    },
-    {
-        "nome": "MPD Engenharia",
-        "descricao": "Construtora voltada para empreendimentos de alto padrão e corporativos.",
-        "endereco": "Alameda Mamoré, 535 - Alphaville, Barueri - SP, Brasil",
-        "custo": "Valores variam conforme empreendimento",
-        "link_foto": "imagens/mpd.webp"
-    },
-    {
-        "nome": "Cyrela Brazil Realty",
-        "descricao": "Uma das maiores incorporadoras do Brasil, com foco em empreendimentos de luxo.",
-        "endereco": "Rua do Rocio, 288 - Vila Olímpia, São Paulo - SP, Brasil",
-        "custo": "Valores variam conforme empreendimento",
-        "link_foto": "imagens/cyrela.webp"
-    },
-    {
-        "nome": "MRV Engenharia",
-        "descricao": "Maior construtora da América Latina, especializada em habitação popular.",
-        "endereco": "Av. Raja Gabaglia, 2675 - Belo Horizonte - MG, Brasil",
-        "custo": "Valores variam conforme empreendimento",
-        "link_foto": "imagens/mrv.webp"
-    },
-    {
-        "nome": "Even Construtora",
-        "descricao": "Empresa com foco em empreendimentos residenciais e comerciais sustentáveis.",
-        "endereco": "Rua Hungria, 1400 - Jardim Europa, São Paulo - SP, Brasil",
-        "custo": "Valores variam conforme empreendimento",
-        "link_foto": "imagens/even.webp"
-    }
+  {
+    "nome": "Cury Construtora",
+    "email": "contato@cury.br",
+    "site": "https://www.cury.com.br",
+    "imagem": "imagens/cury.webp"
+  },
+  {
+    "nome": "Tenda Construtora",
+    "email": "contato@tenda.br",
+    "site": "https://www.tenda.com.br",
+    "imagem": "imagens/tenda.webp"
+  },
+  {
+    "nome": "MPD Engenharia",
+    "email": "contato@mpd.br",
+    "site": "https://www.mpd.com.br",
+    "imagem": "imagens/mpd.jpg"
+  },
+  {
+    "nome": "Cyrela Brazil Realty",
+    "email": "contato@cyrela.br",
+    "site": "https://www.cyrela.com.br",
+    "imagem": "imagens/cyrela.webp"
+  },
+  {
+    "nome": "MRV Engenharia",
+    "email": "contato@mrv.br",
+    "site": "https://www.mrv.com.br",
+    "imagem": "imagens/mrv.webp"
+  },
+  {
+    "nome": "Even Construtora",
+    "email": "contato@even.br",
+    "site": "https://www.even.com.br",
+    "imagem": "imagens/eve.webp"
+  }
 ]
